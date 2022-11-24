@@ -64,6 +64,10 @@ class CourseBookingController extends Controller
     public function getCourseBooking(Request $request)
     {
         // id orphanage != user id
+        if ($request->id) {
+            return ['result' => CourseBookingResource::collection(CourseBooking::where('id', $request->id)->get())];
+        }
+
         if ($request->tutor_id) {
             $getCourseFromTutor = Course::where('tutor_id', $request->tutor_id)->pluck('id');
         }
@@ -76,7 +80,7 @@ class CourseBookingController extends Controller
             return ['result' => CourseBookingResource::collection(CourseBooking::where('orphanage_id', $request->orphanage_id)
             ->whereIn('course_id', $getCourseFromTutor)->get())];
         }
-        if ($request->course_id) {
+        if ($request->course_id){
             return ['result' => CourseBookingResource::collection(CourseBooking::where('course_id', $request->course_id)->get())];
         }
         if ($request->orphanage_id) {
@@ -85,8 +89,9 @@ class CourseBookingController extends Controller
         if ($request->tutor_id) {
             return ['result' => CourseBookingResource::collection(CourseBooking::whereIn('course_id', $getCourseFromTutor)->get())];
         }
-        if (!$request->course_id && !$request->orphanage_id && !$request->tutor_id) {
-            return ['result' => CourseBookingResource::collection(CourseBooking::all())];
-        }
+        
+        return ['result' => CourseBookingResource::collection(CourseBooking::all())];
+        
+
     }
 }
