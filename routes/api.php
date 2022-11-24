@@ -24,6 +24,6 @@ Route::post('/login', [LoginController::class, 'login']);
 
 Route::middleware(VerifyAPIKey::class)->group(function () {
     Route::get('competition',[CompetitionController::class,'index']);
-    Route::get('course-booking',[CourseBookingController::class,'getCourseBooking']);
+    Route::post('course-booking',[CourseBookingController::class,'getCourseBooking']);
     Route::get('course',[CourseController::class,'index']);
 });
