@@ -21,8 +21,9 @@ use App\Http\Middleware\VerifyAPIKey;
 Route::post('/register', [RegisterController::class, 'register']);
 Route::post('/login', [LoginController::class, 'login']);
 
-Route::post('/coursebooking',  [CourseBookingController::class, 'getCourseBooking']);
 
 Route::middleware(VerifyAPIKey::class)->group(function () {
     Route::get('competition',[CompetitionController::class,'index']);
+    Route::get('course-booking',[CourseBookingController::class,'getCourseBooking']);
+    Route::get('course',[CourseController::class,'index']);
 });
