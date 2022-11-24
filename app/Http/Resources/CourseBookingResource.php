@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Models\Orphan;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class CourseBookingResource extends JsonResource
@@ -14,11 +15,13 @@ class CourseBookingResource extends JsonResource
      */
     public function toArray($request)
     {
+        $getOrphans = Orphan::whereIn('id', $this->orphanCourseBookings->pluck('orphan_id'))->get();
         return [
             'id' => $this->id,
             'course' => $this->course,
             'transaction' => $this->transaction,
             'orphanage' => $this->orphanage,
+            'orphans' => $getOrphans,
             'hour_count' => $this->hour_count,
             'start_date' => $this->start_date,
             'status' => $this->status,

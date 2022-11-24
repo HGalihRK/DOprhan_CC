@@ -20,5 +20,7 @@ class CourseBooking extends Model
         return $this->belongsTo(Transaction::class);
     }
 
-
+    public function orphanCourseBookings(){
+        return $this->hasMany(OrphanCourseBooking::class);
+    }
 }
