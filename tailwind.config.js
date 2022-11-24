@@ -13,7 +13,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 
-                sans: ['Be Vietnam Pro', ...defaultTheme.fontFamily.sans],
+                sans: ['Be Vietnam Pro', 'sans-serif'],
             },
         },
     },
