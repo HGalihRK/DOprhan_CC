@@ -66,6 +66,9 @@ class CourseBookingController extends Controller
     {
         //
     }
+
+
+
     public function getAllCourseBookingWithOrphanageID(Request $request){
         // id orphanage != user id
         $getUserOfOrphanage = User::findOrFail($request->orphanage_id);
@@ -73,4 +76,6 @@ class CourseBookingController extends Controller
         
         return ['result' => CourseBookingResource::collection($getAllCourseBookingWithOrphanageID)];
     }
+
+
 }
