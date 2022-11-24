@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\CourseBookingResource;
+use App\Models\Course;
 use App\Models\CourseBooking;
 use App\Models\Orphanage;
 use App\Models\Tutor;
@@ -70,26 +71,12 @@ class CourseBookingController extends Controller
         // id orphanage != user id
         if(!empty($request->orphanage_id)){
             if(!empty($request->tutor_id)){
-                $getCourseFromTutor = Tutor::findOrFail($request->tutor_id)->courses;
+                $getCourseFromTutor = Course::where('tutor_id', $request->tutorId)->pluck('id');
 
-                $getOrphanage = Orphanage::findOrFail($request->orphanage_id);
+                $getCourseFromTutorAndOrphanage = CourseBooking::where('orphanage_id', $request->orphanage_id)->whereIn('course_id',$getCourseFromTutor)->get();
 
-                $courseBooking = [];
+                return ['result' => CourseBookingResource::collection($getCourseFromTutorAndOrphanage)];
 
-                foreach($getCourseFromTutor)
-                $getCourseBooking = CourseBooking::
-
-                $getUserFromOrphanageTable = Orphanage::findOrFail($request->orphanage_id)->user;
-                $getAllCourseBookingFromOrphanage = $getUserFromOrphanageTable->orphanage->courseBookings;
-
-                $getUserFromTutorTable = Tutor::findOrFail($request->tutor_id)->user;
-                $getAllCourseBookingFromTutor = $getUserFromOrphanageTable->orphanage->courseBookings;
-    
-                return ['result' => [
-                    'from Orphanage' => CourseBookingResource::collection($getAllCourseBookingFromOrphanage), 
-                    'from Tutor' => CourseBookingResource::collection($getAllCourseBookingFromOrphanage)
-                    ]
-                ];
             } else if(empty($request->tutor_id)){
                 $getUserFromOrphanageTable = Orphanage::findOrFail($request->orphanage_id)->user;
                 $getAllCourseBookingFromOrphanage = $getUserFromOrphanageTable->orphanage->courseBookings;
@@ -99,17 +86,10 @@ class CourseBookingController extends Controller
             
         } else if (!empty($request->tutor_id)){
             if(!empty($request->orphanage_id)){
-                $getUserFromOrphanageTable = Orphanage::findOrFail($request->orphanage_id)->user;
-                $getAllCourseBookingFromOrphanage = $getUserFromOrphanageTable->orphanage->courseBookings;
+                $getCourseFromTutor = Course::where('tutor_id', $request->tutorId)->pluck('id');
+                $getCourseFromTutorAndOrphanage = CourseBooking::where('orphanage_id', $request->orphanage_id)->whereIn('course_id',$getCourseFromTutor)->get();
 
-                $getUserFromTutorTable = Tutor::findOrFail($request->tutor_id)->user;
-                $getAllCourseBookingFromTutor = $getUserFromOrphanageTable->orphanage->courseBookings;
-    
-                return ['result' => [
-                    'from Orphanage' => CourseBookingResource::collection($getAllCourseBookingFromOrphanage), 
-                    'from Tutor' => CourseBookingResource::collection($getAllCourseBookingFromOrphanage)
-                    ]
-                ];
+                return ['result' => CourseBookingResource::collection($getCourseFromTutorAndOrphanage)];
             } else if(empty($request->orphanage_id)){
                 $getUserFromTutorTable = Tutor::findOrFail($request->tutor_id)->user;
                 $getAllCourseBookingFromTutor = $getUserFromTutorTable->tutor->courseBookings;

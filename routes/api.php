@@ -21,8 +21,7 @@ Route::get('competition',[CompetitionController::class,'index']);
 Route::post('/register', [RegisterController::class, 'register']);
 Route::post('/login', [LoginController::class, 'login']);
 
-Route::apiResource('/coursebooking', CourseBookingController::class)->middleware('auth:sanctum');
-Route::get('/getAllCourseBookingWithOrphanageID', [CourseBookingController::class, 'getAllCourseBookingWithOrphanageID'])->middleware('auth:sanctum');
+Route::post('/coursebooking',  [CourseBookingController::class, 'getCourseBooking'])->middleware('auth:sanctum');
 
 Route::prefix('api')->group(function () {
     Route::get('competition',[CompetitionController::class,'index'])->middleware('auth:sanctum');
