@@ -23,4 +23,8 @@ class CourseBooking extends Model
     public function orphanCourseBookings(){
         return $this->hasMany(OrphanCourseBooking::class);
     }
+
+    public function courseBookingDayTimeRanges(){
+        return $this->hasMany(CourseBookingDayTimeRange::class);
+    }
 }

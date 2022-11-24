@@ -91,7 +91,5 @@ class CourseBookingController extends Controller
         }
         
         return ['result' => CourseBookingResource::collection(CourseBooking::all())];
-        
-
     }
 }
