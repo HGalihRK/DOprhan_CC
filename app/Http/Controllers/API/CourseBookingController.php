@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Http\Requests\StoreCourseBookingRequest;
-use App\Http\Requests\UpdateCourseBookingRequest;
+use App\Http\Controllers\Controller;
+use App\Http\Resources\CourseBookingResource;
 use App\Models\CourseBooking;
+use App\Models\User;
+use Illuminate\Http\Request;
 
 class CourseBookingController extends Controller
 {
@@ -15,26 +17,17 @@ class CourseBookingController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $getAllCourseBooking = CourseBooking::all();
+        return ['result' => CourseBookingResource::collection($getAllCourseBooking)];
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreCourseBookingRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreCourseBookingRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -42,33 +35,23 @@ class CourseBookingController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\CourseBooking  $courseBooking
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(CourseBooking $courseBooking)
+    public function show($id)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\CourseBooking  $courseBooking
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(CourseBooking $courseBooking)
-    {
-        //
+        $getAllCourseBooking = CourseBooking::findOrFail($id);
+        return ['result' => new CourseBookingResource($getAllCourseBooking)];
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateCourseBookingRequest  $request
-     * @param  \App\Models\CourseBooking  $courseBooking
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateCourseBookingRequest $request, CourseBooking $courseBooking)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -76,11 +59,18 @@ class CourseBookingController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\CourseBooking  $courseBooking
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(CourseBooking $courseBooking)
+    public function destroy($id)
     {
         //
+    }
+    public function getAllCourseBookingWithOrphanageID(Request $request){
+        // id orphanage != user id
+        $getUserOfOrphanage = User::findOrFail($request->orphanage_id);
+        $getAllCourseBookingWithOrphanageID = $getUserOfOrphanage->orphanage->courseBookings;
+        
+        return ['result' => CourseBookingResource::collection($getAllCourseBookingWithOrphanageID)];
     }
 }

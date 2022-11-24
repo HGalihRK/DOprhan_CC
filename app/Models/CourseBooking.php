@@ -16,5 +16,9 @@ class CourseBooking extends Model
         return $this->belongsTo(Course::class);
     }
 
+    public function transaction(){
+        return $this->belongsTo(Transaction::class);
+    }
+
 
 }

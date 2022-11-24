@@ -1,8 +1,12 @@
 <?php
 
+use App\Http\Controllers\API\Auth\LoginController;
+use App\Http\Controllers\API\Auth\RegisterController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\CompetitionController;
+use App\Http\Controllers\API\CourseBookingController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,6 +18,12 @@ use App\Http\Controllers\API\CompetitionController;
 |
 */
 Route::get('competition',[CompetitionController::class,'index']);
+Route::post('/register', [RegisterController::class, 'register']);
+Route::post('/login', [LoginController::class, 'login']);
+
+Route::apiResource('/coursebooking', CourseBookingController::class)->middleware('auth:api');
+Route::post('/getAllCourseBookingWithOrphanageID', [CourseBookingController::class, 'getAllCourseBookingWithOrphanageID'])->middleware('auth:api');
+
 Route::prefix('api')->group(function () {
     Route::get('competition',[CompetitionController::class,'index']);
 });
