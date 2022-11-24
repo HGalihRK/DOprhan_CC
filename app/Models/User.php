@@ -29,6 +29,16 @@ class User extends Authenticatable
         'password',
     ];
 
+    public function orphanage()
+    {
+        return $this->hasOne(Orphanage::class);
+    }
+
+    public function tutor()
+    {
+        return $this->hasOne(Tutor::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
