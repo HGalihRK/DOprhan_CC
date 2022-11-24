@@ -80,7 +80,7 @@ class CourseBookingController extends Controller
             return ['result' => CourseBookingResource::collection(CourseBooking::where('course_id', $request->course_id)->get())];
         }
         if ($request->orphanage_id) {
-            return ['result' => CourseBookingResource::collection(CourseBookingResource::where('orphanage_id', $request->orphanage_id)->get())];
+            return ['result' => CourseBookingResource::collection(CourseBooking::where('orphanage_id', $request->orphanage_id)->get())];
         }
         if ($request->tutor_id) {
             return ['result' => CourseBookingResource::collection(CourseBooking::whereIn('course_id', $getCourseFromTutor)->get())];
