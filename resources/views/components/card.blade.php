@@ -1,4 +1,4 @@
-<div class="cardview">
+<card>
     {{$title}}
     {{$body}}
-</div>
+</card>
