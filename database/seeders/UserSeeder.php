@@ -24,6 +24,15 @@ class UserSeeder extends Seeder
                                 '031-78359345', '0812-3226-294', '031-81111311', '031-5673535', '031-5663209', '031-5677579',
                                 '031-7666278', '031-8282488', '031-8292650', '031-3767000', '031-5471410', '031-8284276',
                                 '031-7312227', '031-5022818', '031-5341627', '0812-3111-0141'];
+        
+        $arrayTutor = ['Ruth Vania', 'Kinanthi', 'Joceline', 'Chusnul', 'Rena Surya', 'Melia Chandra',
+                                'Josephine', 'Tamara', 'Pophie', 'Elshabyta Auditya', 'Adeline', 'Rokhmania',
+                                'Salma', 'Arinda', 'Noviani', 'Firda', 'Felicia', 'Priska',
+                                'Setya', 'Rurie Ulfa', 'Elvin', 'Belinda', 'Mayang', 'Corina',
+                                'Brigitta', 'Firdaus', 'Fauroni', 'Alvian', 'Adiguna', 'Dikey Putra',
+                                'Muhammad Dary', 'Denny', 'Nathanael', 'Nathaniel Albert', 'Agustinus', 'Arif',
+                                'Rizki Putra', 'Valdiansyah', 'Armando', 'Aufal', 'Ryan', 'Zikry', 'Fakhrur', 'Darius',
+                                'Toni Setiawan', 'Adi Wijaya', 'Thomas Gregorius', 'Felix', 'Hendy', 'Hariawan Widi'];      
 
         $arrayAddress = ['Jl. Keputih Tegal I/25, Surabaya Timur', 'Jl. Nginden Baru IV/22, Surabaya Timur',
                                 'Jl. Wonoayu VI/10, Surabaya Timur', 'Jl. Kendung I/40, Surabaya Barat',
@@ -47,16 +56,32 @@ class UserSeeder extends Seeder
 
         $faker = Faker::create('id_ID')->unique();
 
-        User::factory()->count(50)->create([
-            'user_type' => 'Tutor',
-            'phone_number' => $faker->phoneNumber(),
-            'address' => $faker->address(),
-        ]);
+        for($i=0; $i<25; $i++){
+            User::factory()->create([
+                'user_type' => 'Tutor',
+                'name' => $arrayTutor[$i],
+                'gender' => 'Female',
+                'phone_number' => $faker->phoneNumber(),
+                'address' => $faker->address(),
+            ]);
+        }
+
+        for($i=25; $i<count($arrayTutor); $i++){
+            User::factory()->create([
+                'user_type' => 'Tutor',
+                'name' => $arrayTutor[$i],
+                'gender' => 'Male',
+                'phone_number' => $faker->phoneNumber(),
+                'address' => $faker->address(),
+            ]);
+        }
 
         for($i=0; $i<count($arrayPhoneNumber); $i++){
             User::factory()->create([
+                'name' => $faker->name(),
                 'user_type' => 'Pengurus Panti',
                 'phone_number'=> $arrayPhoneNumber[$i],
+                'gender' => Faker::create('id_ID')->randomElement(['Female', 'Male']),
                 'address' => $arrayAddress[$i],
             ]);
         }
