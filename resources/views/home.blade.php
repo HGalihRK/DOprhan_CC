@@ -61,127 +61,24 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-8">
-                    @php
-                        $fitur = [
-                            [
-                                'icon' => '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-</svg>',
-                                'title' => 'Publikasi Profil Panti dan Tutor',
-                            ],
-                        ];
-                    @endphp
-                    @foreach ($fitur as $item)
-                        <!-- Card -->
-                        <div class="flex flex-col rounded-2xl shadow bg-white overflow-hidden">
-                            <!-- Card Header -->
-                            <div class="py-4 px-5 lg:px-6 w-full">
-                                <img src="{{ $item['icon'] }}" alt="">
-                                </>
-                            </div>
-                            <!-- END Card Header -->
-
-                            <!-- Card Body -->
-                            <div class="p-5 lg:p-6 grow w-full">
-                                <p>
-                                    {{ $item['title'] }}
-                                </p>
-                            </div>
-                            <!-- END Card Body -->
-
-                            <!-- Card Footer -->
-                            <div class="py-4 px-5 lg:px-6 w-full text-sm text-gray-600">
-                                <p>
-                                    Card Footer
-                                </p>
-                            </div>
-                            <!-- END Card Footer -->
-                        </div>
-                        <!-- END Card -->
-                    @endforeach
-
                     <!-- Card -->
-                    <div class="flex flex-col rounded-2xl shadow bg-white overflow-hidden">
-                        <!-- Card Header -->
-                        <div class="py-4 px-5 lg:px-6 w-full">
-                            <h3 class="font-medium">
-                                Card Title
-                            </h3>
-                        </div>
-                        <!-- END Card Header -->
-
-                        <!-- Card Body -->
-                        <div class="p-5 lg:p-6 grow w-full">
-                            <p>
-                                Content..
-                            </p>
-                        </div>
-                        <!-- END Card Body -->
-
-                        <!-- Card Footer -->
-                        <div class="py-4 px-5 lg:px-6 w-full text-sm text-gray-600">
-                            <p>
-                                Card Footer
-                            </p>
-                        </div>
-                        <!-- END Card Footer -->
-                    </div>
-                    <!-- END Card -->
-
-                    <!-- Card -->
-                    <div class="flex flex-col rounded-2xl shadow bg-white overflow-hidden">
-                        <!-- Card Header -->
-                        <div class="py-4 px-5 lg:px-6 w-full">
-                            <h3 class="font-medium">
-                                Card Title
-                            </h3>
-                        </div>
-                        <!-- END Card Header -->
-
-                        <!-- Card Body -->
-                        <div class="p-5 lg:p-6 grow w-full">
-                            <p>
-                                The height of all cards are auto adjusted based on the available space.
-                            </p>
-                        </div>
-                        <!-- END Card Body -->
-
-                        <!-- Card Footer -->
-                        <div class="py-4 px-5 lg:px-6 w-full text-sm text-gray-600">
-                            <p>
-                                Card Footer
-                            </p>
-                        </div>
-                        <!-- END Card Footer -->
-                    </div>
-                    <!-- END Card -->
-
-                    <!-- Card -->
-                    <div class="flex flex-col rounded-2xl shadow bg-white overflow-hidden">
-                        <!-- Card Header -->
-                        <div class="py-4 px-5 lg:px-6 w-full">
-                            <h3 class="font-medium">
-                                Card Title
-                            </h3>
-                        </div>
-                        <!-- END Card Header -->
-
-                        <!-- Card Body -->
-                        <div class="p-5 lg:p-6 grow w-full">
-                            <p>
-                                Content..
-                            </p>
-                        </div>
-                        <!-- END Card Body -->
-
-                        <!-- Card Footer -->
-                        <div class="py-4 px-5 lg:px-6 w-full text-sm text-gray-600">
-                            <p>
-                                Card Footer
-                            </p>
-                        </div>
-                        <!-- END Card Footer -->
-                    </div>
+                    <x-card>
+                        <x-slot:icon>
+                            <svg width="98" height="97" viewBox="0 0 98 97" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="self-center">
+                                <circle cx="49" cy="48.5" r="47.5" stroke="#3B82F6"
+                                    stroke-width="2" />
+                                <path
+                                    d="M41.0834 38.6042C41.0834 42.9764 44.6278 46.5208 49.0001 46.5208C53.3723 46.5208 56.9167 42.9764 56.9167 38.6042C56.9167 34.2319 53.3723 30.6875 49.0001 30.6875C44.6278 30.6875 41.0834 34.2319 41.0834 38.6042Z"
+                                    stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M49.0001 52.4583C56.6515 52.4583 62.8542 58.6611 62.8542 66.3125H35.1459C35.1459 58.6611 41.3486 52.4583 49.0001 52.4583Z"
+                                    stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </x-slot:icon>
+                        <x-slot:title>Publikasi Profil
+                            Panti dan Tutor</x-slot:title>
+                    </x-card>
                     <!-- END Card -->
                 </div>
             </div>
