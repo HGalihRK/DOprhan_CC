@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\CompetitionController;
 use App\Http\Controllers\API\CourseBookingController;
+use App\Http\Controllers\API\DayController;
 use App\Http\Middleware\VerifyAPIKey;
 
 /*
@@ -24,6 +25,7 @@ Route::post('/login', [LoginController::class, 'login']);
 
 Route::middleware(VerifyAPIKey::class)->group(function () {
     Route::get('competition',[CompetitionController::class,'index']);
-    Route::get('course-booking',[CourseBookingController::class,'getCourseBooking']);
+    Route::post('course-booking',[CourseBookingController::class,'getCourseBooking']);
+    Route::post('day',[DayController::class,'getDay']);
     Route::get('course',[CourseController::class,'index']);
 });
