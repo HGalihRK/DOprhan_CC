@@ -1,12 +1,12 @@
-<div class="flex flex-col rounded-2xl shadow bg-white overflow-hidden">
+<div class="flex flex-col rounded-2xl shadow bg-white overflow-hidden text-center gap-4">
     <!-- Card Header -->
-    <div class="py-4 px-5 lg:px-6 w-full">
+    <div class="pt-5 w-full">
         {{ $icon }}
     </div>
     <!-- END Card Header -->
 
     <!-- Card Body -->
-    <div class="p-5 lg:p-6 grow w-full">
+    <div class="px-5 pb-5 w-full text-xl leading-8 font-semibold">
         <p>{{ $title }}</p>
     </div>
     <!-- END Card Body -->
