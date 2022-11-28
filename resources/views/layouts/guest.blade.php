@@ -14,35 +14,43 @@
         content="Nur Azizah, Oey Darryl Valencio Wijaya, Nathanael Abel Arianto, David Christian, Probo Krishnacahya, Haning Galih Rani Kumbara." />
     <meta name="theme-color" content="#3B82F6">
 
-    {{-- Web Application Title --}}
+    {{-- Title --}}
     <title>@yield('title')</title>
 
-    {{-- Web Application Favicon --}}
+    {{-- Favicon --}}
     <link rel="icon" href="{{ url('img/logo.svg?v=2') }}" type="image/svg" />
 
     {{-- Laravel Framework CSRF Token --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    {{-- Google Fonts --}}
+    {{-- External Cascading Style Sheets --}}
+    <link rel="stylesheet" href="{{ url('css/style.css') }}" type="text/css" />
+
+    {{-- Google Fonts CDN --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&display=swap" rel="stylesheet">
 
     {{-- Vite - Tailwind CSS --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-    {{-- Cascading Style Sheets Library (Animate On Scroll) --}}
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body class="flex flex-col h-screen bg-gray-50 bg-body bg-repeat bg-local bg-blend-multiply">
+    {{-- Header --}}
     @livewire('navigation-menu')
+
+    {{-- Content --}}
     <main class="container max-w-7xl mx-auto sm:p-6 lg:p-8 space-y-8">
         <div class="font-sans text-gray-900 antialiased">{{ $slot }}</div>
     </main>
+
+    {{-- Footer --}}
     <footer class="mt-auto bg-gray-800 text-center text-lg leading-7 font-bold text-white p-5">
         <p>Archotech&nbsp;&#45;&nbsp;2022</p>
     </footer>
+
+    {{-- Cascading Style Sheets Library (Animate On Scroll) --}}
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 
 </html>

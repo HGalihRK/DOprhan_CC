@@ -14,7 +14,7 @@
             <div class="text-center space-y-10 relative container xl:max-w-7xl mx-auto px-4 py-16 lg:px-8 lg:py-32">
                 <div>
                     <div class="text-6xl md:text-9xl font-extrabold mb-10 md:mb-20 inline-block relative">
-                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-blue-500 relative">
+                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-sky-400 relative">
                             404
                         </span>
                     </div>
