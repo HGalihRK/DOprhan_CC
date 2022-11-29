@@ -41,16 +41,13 @@
 
     {{-- Content --}}
     <main class="container max-w-7xl mx-auto sm:p-6 lg:p-8 space-y-8">
-        <div class="font-sans text-gray-900 antialiased">{{ $slot }}</div>
+        <div class="font-sans text-gray-900 antialiased space-y-8">{{ $slot }}</div>
     </main>
 
     {{-- Footer --}}
     <footer class="mt-auto bg-gray-800 text-center text-lg leading-7 font-bold text-white p-5">
         <p>Archotech&nbsp;&#45;&nbsp;2022</p>
     </footer>
-
-    {{-- Cascading Style Sheets Library (Animate On Scroll) --}}
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 
 </html>

@@ -1,8 +1,22 @@
+/*! DESKTOP VIEW */
+
+/** HyperText Markup Language - Blade Components Tag */
+img,
+a,
+::placeholder {
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+a {
+    color: var(--blue-500) !important;
+}
+
 /** Pseudo-classes */
 :root {
     --blue-500: #3B82F6;
     --blue-600: #2563EB;
-    --gray-500:#6B7280;
+    --gray-500: #6B7280;
     --white: #FFFFFF;
     --black: #000000;
 }

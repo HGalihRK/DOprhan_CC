@@ -45,8 +45,8 @@
             <!-- Card -->
             <x-card>
                 <x-slot:icon>
-                    <svg width="98" height="97" viewBox="0 0 98 97" fill="none"
-                        xmlns="http://www.w3.org/2000/svg" class="inline-block">
+                    <svg width=80 height=80 viewBox="0 0 98 97" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="inline-block">
                         <circle cx="49" cy="48.5" r="47.5" stroke="#3B82F6" stroke-width="2" />
                         <path
                             d="M41.0834 38.6042C41.0834 42.9764 44.6278 46.5208 49.0001 46.5208C53.3723 46.5208 56.9167 42.9764 56.9167 38.6042C56.9167 34.2319 53.3723 30.6875 49.0001 30.6875C44.6278 30.6875 41.0834 34.2319 41.0834 38.6042Z"
@@ -60,8 +60,8 @@
             </x-card>
             <x-card>
                 <x-slot:icon>
-                    <svg width="98" height="97" viewBox="0 0 98 97" fill="none"
-                        xmlns="http://www.w3.org/2000/svg" class="inline-block">
+                    <svg width=80 height=80 viewBox="0 0 98 97" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="inline-block">
                         <circle cx="49" cy="48.5" r="47.5" stroke="#3B82F6" stroke-width="2" />
                         <path
                             d="M31.1875 66.3125L43.0625 54.4375M39.1042 44.5417C39.1042 52.1931 45.3069 58.3958 52.9583 58.3958C60.6098 58.3958 66.8125 52.1931 66.8125 44.5417C66.8125 36.8902 60.6098 30.6875 52.9583 30.6875C45.3069 30.6875 39.1042 36.8902 39.1042 44.5417Z"
@@ -72,8 +72,8 @@
             </x-card>
             <x-card>
                 <x-slot:icon>
-                    <svg width="98" height="97" viewBox="0 0 98 97" fill="none"
-                        xmlns="http://www.w3.org/2000/svg" class="inline-block">
+                    <svg width=80 height=80 viewBox="0 0 98 97" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="inline-block">
                         <circle cx="49" cy="48.5" r="47.5" stroke="#3B82F6" stroke-width="2" />
                         <path
                             d="M35.1458 48.5L31.1875 30.6875L66.8125 48.5L31.1875 66.3125L35.1458 48.5ZM35.1458 48.5L50.9792 48.5"
@@ -84,8 +84,8 @@
             </x-card>
             <x-card>
                 <x-slot:icon>
-                    <svg width="98" height="97" viewBox="0 0 98 97" fill="none"
-                        xmlns="http://www.w3.org/2000/svg" class="inline-block">
+                    <svg width=80 height=80 viewBox="0 0 98 97" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="inline-block">
                         <circle cx="49" cy="48.5" r="47.5" stroke="#3B82F6" stroke-width="2" />
                         <g clip-path="url(#clip0_1336_22064)">
                             <path
@@ -103,6 +103,50 @@
                 <x-slot:title>Rekomendasi Perlombaan</x-slot:title>
             </x-card>
             <!-- END Card -->
+        </div>
+    </div>
+
+    {{-- SDGs --}}
+    <div class="flex flex-col space-y-4">
+        <div>
+            <p class="text-3xl leading-10 font-bold">Mendukung Sustainable Development Goals &#40;SDGs&#41;</p>
+            <p class="text-xl leading-8 text-gray-500">Marilah bersama-sama turut mewujudkan kelancaran SDGs</p>
+        </div>
+        <div>
+            <div class="flex space-x-6 items-center gap-8">
+                <div class=" w-fit">
+                    <img src="{{ url('img/home-sdgs4.svg') }}" alt="Kategori" />
+                </div>
+                <div class="w-fit">
+                    <p class="text-lg leading-8 font-semibold">Gol ke&#45;4 &#40;Pendidikan Berkualitas&#41;</p>
+                    <q class="text-base">Menjamin Kualitas Pendidikan yang Inklusif dan Merata serta Meningkatkan
+                        Kesempatan
+                        Belajar Sepanjang Hayat untuk Semua</q>
+                    <ul class="list-disc text-base text-gray-500">
+                        <li>Target ke&#45;4.4&#58; Pada tahun 2030, meningkatkan secara signifikan jumlah pemuda dan
+                            orang
+                            dewasa yang memiliki keterampilan yang relevan, termasuk keterampilan teknik dan kejuruan,
+                            untuk
+                            pekerjaan, pekerjaan yang layak dan kewirausahaan.</li>
+                        <li>Target ke&#45;4.7&#58; Pada tahun 2030, menjamin semua peserta didik memperoleh pengetahuan
+                            dan keterampilan yang diperlukan untuk meningkatkan pembangunan berkelanjutan, termasuk
+                            antara lain, melalui pendidikan untuk pembangunan berkelanjutan dan gaya hidup yang
+                            berkelanjutan, hak asasi manusia, kesetaraan gender, promosi budaya damai dan non kekerasan,
+                            kewarganegaraan global dan penghargaan terhadap keanekaragaman budaya dan kontribusi budaya
+                            terhadap pembangunan berkelanjutan.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Kategori --}}
+    <div class="flex flex-col space-y-4">
+        <div>
+            <p class="text-3xl leading-10 font-bold">Beragam kategori kursus tersedia</p>
+        </div>
+        <div>
+            <img src="{{ url('img/home-kategori.svg') }}" alt="Kategori" />
         </div>
     </div>
 </x-guest-layout>

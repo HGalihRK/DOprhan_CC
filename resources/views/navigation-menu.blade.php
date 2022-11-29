@@ -92,7 +92,7 @@
         </div>
     @endauth
     @guest
-        <div class="align-middle flex my-3 gap-2">
+        <div class="flex items-center gap-3">
             <a href="{{ route('login') }}">
                 <x-secondary-button>
                     Masuk
