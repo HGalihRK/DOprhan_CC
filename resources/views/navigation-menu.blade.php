@@ -5,19 +5,19 @@
                 <div class="flex-shrink-0 flex items-center">
                     <a href="/" class="flex items-center py-4 px-2">
                         <img src="{{ url('img/logo.svg') }}" alt="D&#39;Orphan" class="h-8 w-8 mr-3">
-                        <span class=" text-base leading-6 font-bold text-blue-500">D&#39;Orphan</span>
+                        <span class="text-base leading-6 font-bold text-blue-500">D&#39;Orphan</span>
                     </a>
                 </div>
-                <div class="hidden sm:ml-6 sm:flex sm:space-x-8 ">
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
                     <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
                     <a href="/dasbor"
-                        class="text-gray-500 border-transparent hover:text-blue-500 active:border-blue-500 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Dasbor</a>
+                        class="pages text-gray-500 border-transparent hover:text-blue-500 active:border-blue-500 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Dasbor</a>
                     <a href="/cari"
-                        class="text-gray-500 border-transparent hover:text-blue-500 active:border-blue-500 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Cari</a>
+                        class="pages text-gray-500 border-transparent hover:text-blue-500 active:border-blue-500 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Cari</a>
                     <a href="/lomba"
-                        class="text-gray-500 border-transparent hover:text-blue-500 active:border-blue-500 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Lomba</a>
+                        class="pages text-gray-500 border-transparent hover:text-blue-500 active:border-blue-500 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Lomba</a>
                     <a href="/donasi"
-                        class="text-gray-500 border-transparent hover:text-blue-500 active:border-blue-500 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Donasi</a>
+                        class="pages text-gray-500 border-transparent hover:text-blue-500 active:border-blue-500 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Donasi</a>
                 </div>
             </div>
             @auth
@@ -35,15 +35,15 @@
                             </button>
                         </div>
                         <!--
-                                                                        Dropdown menu, show/hide based on menu state.
-                                                                       
-                                                                        Entering: "transition ease-out duration-200"
-                                                                        From: "transform opacity-0 scale-95"
-                                                                        To: "transform opacity-100 scale-100"
-                                                                        Leaving: "transition ease-in duration-75"
-                                                                        From: "transform opacity-100 scale-100"
-                                                                        To: "transform opacity-0 scale-95"
-                                                                        -->
+                                                                                Dropdown menu, show/hide based on menu state.
+                                                                               
+                                                                                Entering: "transition ease-out duration-200"
+                                                                                From: "transform opacity-0 scale-95"
+                                                                                To: "transform opacity-100 scale-100"
+                                                                                Leaving: "transition ease-in duration-75"
+                                                                                From: "transform opacity-100 scale-100"
+                                                                                To: "transform opacity-0 scale-95"
+                                                                                -->
                         <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
                             role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                             <!-- Active: "bg-gray-100", Not Active: "" -->
@@ -63,24 +63,24 @@
                         aria-controls="mobile-menu" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
                         <!--
-                                                                        Icon when menu is closed.
-                                                                       
-                                                                        Heroicon name: outline/menu
-                                                                       
-                                                                        Menu open: "hidden", Menu closed: "block"
-                                                                        -->
+                                                                                Icon when menu is closed.
+                                                                               
+                                                                                Heroicon name: outline/menu
+                                                                               
+                                                                                Menu open: "hidden", Menu closed: "block"
+                                                                                -->
                         <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                         <!--
-                                                                        Icon when menu is open.
-                                                                       
-                                                                        Heroicon name: outline/x
-                                                                       
-                                                                        Menu open: "block", Menu closed: "hidden"
-                                                                        -->
+                                                                                Icon when menu is open.
+                                                                               
+                                                                                Heroicon name: outline/x
+                                                                               
+                                                                                Menu open: "block", Menu closed: "hidden"
+                                                                                -->
                         <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

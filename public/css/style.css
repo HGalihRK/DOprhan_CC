@@ -1,15 +1,20 @@
 /*! DESKTOP VIEW */
 
 /** HyperText Markup Language - Blade Components Tag */
-img,
+
 a,
+img,
 ::placeholder {
     -webkit-user-drag: none;
     user-select: none;
 }
 
-a {
+a:not(.pages) {
     color: var(--blue-500) !important;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /** Pseudo-classes */
