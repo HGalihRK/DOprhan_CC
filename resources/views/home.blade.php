@@ -207,8 +207,8 @@
     </div>
 
     {{-- Donasi --}}
-    <div class="flex flex-col items-center rounded-2xl shadow bg-blue-50 gap-4 p-8">
-        <img src="{{ url('img/home-donasi.svg') }}" alt="Donasi" />
+    <div class="flex flex-col items-center rounded-2xl shadow gap-4 p-8" id="donasi">
+        <img src="{{ url('img/home-donasi-illustration.svg') }}" alt="Donasi" />
         <div class="text-center">
             <p class="text-3xl leading-10 font-bold">Donasi praktis</p>
             <p class="text-xl leading-8 text-gray-500">Mewadahi kemudahan proses berdonasi dari para Donatur untuk
