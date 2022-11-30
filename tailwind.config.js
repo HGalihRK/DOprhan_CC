@@ -12,6 +12,8 @@ module.exports = {
         extend: {
             backgroundImage: {
                 'body': 'url(' + require('path').resolve(__dirname, 'public/img/background.svg') + ')',
+                'home-tutor': 'url(' + require('path').resolve(__dirname, 'public/img/home-tutor.svg') + ')',
+                'home-donasi-background': 'url(' + require('path').resolve(__dirname, 'public/img/home-donasi-background.svg') + ')',
             },
             fontFamily: {
                 'sans': 'Be Vietnam Pro, sans-serif',

@@ -44,8 +44,3 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background-color: var(--blue-600);
 }
-
-/* Selector (ID) */
-#donasi {
-    background: url('../img/home-donasi-background.svg');
-}
