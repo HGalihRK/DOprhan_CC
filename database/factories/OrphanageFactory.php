@@ -18,7 +18,7 @@ class OrphanageFactory extends Factory
     {
         return [
             'photo_url'=>'https://source.unsplash.com/random',
-            'description'=>"Lorem Ipsum, Ini adalah deskripsi dummy panti",
+            'description'=>Faker::create('id_ID')->text(),
             'member_count'=>random_int(10,100),
             'balance'=>random_int(10000,3000000),
         ];

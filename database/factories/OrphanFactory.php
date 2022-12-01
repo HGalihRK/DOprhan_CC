@@ -30,7 +30,7 @@ class OrphanFactory extends Factory
             'name' => $faker->name(),
             'date_of_birth' =>$birth_date,
             'gender' => $faker->randomElement(['Male', 'Female']),
-            'note' => random_int(1, 2) == 1 ? 'Anak ini memiliki disabilitas' : '',
+            'note' => random_int(1, 2) == 1 ? 'Anak Disabilitas' : '',
         ];
     }
 }
