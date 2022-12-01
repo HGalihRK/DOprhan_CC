@@ -26,6 +26,14 @@ html {
     --black: #000000;
 }
 
+button:active {
+    transform: scale(0.9);
+}
+
+input:focus {
+    border: 0.5px solid var(--blue-500) !important;
+}
+
 /** Pseudo-elements */
 ::-webkit-scrollbar {
     height: 0.625rem;

@@ -19,7 +19,7 @@
                     </a>
                 </div>
             </div>
-            <div class="w-6/12">
+            <div class="w-6/12 hidden md:block">
                 <img src="{{ url('img/home-hero.svg') }}" alt="Bakat Minat">
             </div>
         </div>
@@ -126,7 +126,7 @@
                     <q class="text-base">Menjamin Kualitas Pendidikan yang Inklusif dan Merata serta Meningkatkan
                         Kesempatan
                         Belajar Sepanjang Hayat untuk Semua</q>
-                    <ul class="list-disc text-base text-gray-500">
+                    <ul class="list-disc text-base text-gray-500 ml-8">
                         <li>Target ke&#45;4.4&#58; Pada tahun 2030, meningkatkan secara signifikan jumlah pemuda dan
                             orang
                             dewasa yang memiliki keterampilan yang relevan, termasuk keterampilan teknik dan kejuruan,
@@ -150,7 +150,7 @@
                         Ekonomi&#41;</p>
                     <q class="text-base">Meningkatkan Pertumbuhan Ekonomi yang Inklusif dan Berkelanjutan, Kesempatan
                         Kerja yang Produktif dan Menyeluruh, serta Pekerjaan yang Layak untuk Semua</q>
-                    <ul class="list-disc text-base text-gray-500">
+                    <ul class="list-disc text-base text-gray-500 ml-8">
                         <li>Target ke&#45;8.3&#58; Menggalakkan kebijakan pembangunan yang mendukung kegiatan produktif,
                             penciptaan lapangan kerja layak, kewirausahaan, kreativitas dan inovasi, dan mendorong
                             formalisasi dan pertumbuhan usaha mikro, kecil, dan menengah, termasuk melalui akses
