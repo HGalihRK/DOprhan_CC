@@ -75,13 +75,14 @@ class UserSeeder extends Seeder
                 'address' => $faker->address(),
             ]);
         }
-
+        $faker2 = Faker::create('id_ID');
         for($i=0; $i<count($arrayPhoneNumber); $i++){
+            $rand_gender = $faker2->randomElement(['Male', 'Female']);
             User::factory()->create([
-                'name' => $faker->name(),
+                'name' => $rand_gender == 'Male' ? $faker->firstNameMale() : $faker->firstNameFemale(),
                 'user_type' => 'Pengurus Panti',
                 'phone_number'=> $arrayPhoneNumber[$i],
-                'gender' => Faker::create('id_ID')->randomElement(['Female', 'Male']),
+                'gender' => $rand_gender,
                 'address' => $arrayAddress[$i],
             ]);
         }

@@ -21,7 +21,7 @@ class TutorFactory extends Factory
         $faker = Faker::create('en_EN');
         return [
             'bank_account' => rand(1111111111,9999999999),
-            'description' => $faker->catchPhrase(),
+            'description' => $faker->text(250),
         ];
     }
 }

@@ -17,6 +17,7 @@ return new class() extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->integer('money')->default(0);
             $table->string('phone_number')->nullable();
             $table->enum('gender', ['Male', 'Female']);
             $table->enum('user_type', ['Pengurus Panti', 'Tutor']);
@@ -26,7 +27,7 @@ return new class() extends Migration
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
-            $table->text('address');
+            $table->string('address')->nullable();
             $table->timestamps();
         });
     }

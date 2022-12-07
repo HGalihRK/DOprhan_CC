@@ -23,20 +23,20 @@ class User extends Authenticatable
      *
      * @var string[]
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
+    protected $guarded = [
+        'id'
     ];
-
-    public function orphanage()
+    public function transactions()
     {
-        return $this->hasOne(Orphanage::class);
+        return $this->hasMany(Transaction::class, 'user_id');
     }
-
     public function tutor()
     {
         return $this->hasOne(Tutor::class);
+    }
+    public function orphanage()
+    {
+        return $this->hasOne(Orphanage::class);
     }
 
     /**

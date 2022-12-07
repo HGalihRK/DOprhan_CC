@@ -15,12 +15,10 @@ return new class extends Migration
     {
         Schema::create('competitions', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('tutor_id');
-            $table->foreign('tutor_id')->references('id')->on('tutors');
-            $table->string("title");
-            $table->string("location");
-            $table->string("description");
-            $table->string("category");
+            $table->string('name');
+            $table->string('registration_start_date');
+            $table->string('url');
+            $table->text('description');
             $table->timestamps();
         });
     }

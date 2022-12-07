@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Competition extends Model
 {
     use HasFactory;
+    protected $guarded = [
+        'id',
+    ];
+    public function competitionRecommendations()
+    {
+        return $this->hasMany(CompetitionRecommendation::class);
+    }
 }

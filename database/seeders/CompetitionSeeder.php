@@ -18,10 +18,6 @@ class CompetitionSeeder extends Seeder
      */
     public function run()
     {
-        foreach(Tutor::all() as $tutor){
-            Competition::factory()->count(5)->create([
-                'tutor_id'=>$tutor->id
-            ]);
-        }
+        Competition::factory()->count(50)->create();
     }
 }

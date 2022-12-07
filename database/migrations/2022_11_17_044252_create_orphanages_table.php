@@ -19,9 +19,10 @@ return new class extends Migration
             $table->string("photo_url");
             $table->string("description");
             $table->integer("member_count");
-            $table->integer("balance");
             $table->unsignedBigInteger("user_id");
-            $table->foreign("user_id")->references("id")->on("users");
+            $table->foreign("user_id")->references("id")->on("users")
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
             $table->timestamps();
         });
     }

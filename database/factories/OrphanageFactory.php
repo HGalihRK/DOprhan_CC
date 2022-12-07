@@ -18,11 +18,11 @@ class OrphanageFactory extends Factory
      */
     public function definition()
     {
+        $faker = Faker::create('id_ID');
         return [
-            'photo_url'=>'https://source.unsplash.com/random',
-            'description'=>Faker::create('id_ID')->text(),
-            'member_count'=>random_int(10,100),
-            'balance'=>random_int(10000,3000000),
+            'photo_url' => $faker->imageUrl($width = 640, $height = 480, $category = null, $randomize = true, $word = null, $gray = false),
+            'description' => Faker::create('id_ID')->text(),
+            'member_count' => random_int(10, 100),
         ];
     }
 }
