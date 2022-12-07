@@ -8,6 +8,7 @@ use App\Http\Controllers\API\CompetitionController;
 use App\Http\Controllers\API\CourseController;
 use App\Http\Controllers\API\CourseBookingController;
 use App\Http\Controllers\API\OrphanageController;
+use App\Http\Controllers\API\TutorController;
 use App\Http\Controllers\API\DayController;
 use App\Http\Middleware\VerifyAPIKey;
 
@@ -32,4 +33,5 @@ Route::middleware(VerifyAPIKey::class)->group(function () {
     Route::post('day', [DayController::class, 'getDay']);
     Route::get('course', [CourseController::class, 'index']);
     Route::get('orphanage', [OrphanageController::class, 'index']);
+    Route::get('tutor', [TutorController::class, 'index']);
 });
