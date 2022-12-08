@@ -20,6 +20,10 @@ class TutorController extends Controller
         if ($request->id) {
             return ['result' => TutorResource::collection(Tutor::where('id', $request->id)->get())];
         }
+        // return tutor by user id
+        if ($request->userId) {
+            return ['result' => TutorResource::collection(Tutor::where('user_id', $request->userId)->get())];
+        }
         // return all tutor if id not exist
         return ['result' => TutorResource::collection(Tutor::all())];
     }

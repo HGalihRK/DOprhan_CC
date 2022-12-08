@@ -17,7 +17,7 @@ class CourseBookingResource extends JsonResource
      */
     public function toArray($request)
     {
-        
+
         return [
             'id' => $this->id,
             'course' => $this->course,
@@ -31,6 +31,6 @@ class CourseBookingResource extends JsonResource
             'schedule' => DayTimeRange::whereIn('id', $this->courseBookingDayTimeRanges->pluck('day_time_range_id'))->get(),
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
-          ];
+        ];
     }
 }
