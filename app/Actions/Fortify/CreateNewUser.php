@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Actions\Fortify;
+use Illuminate\Support\Str;
 
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
@@ -28,6 +29,8 @@ class CreateNewUser implements CreatesNewUsers
         ])->validate();
 
         return User::create([
+            'user_type' => $input['role'],
+            'api_key' => Str::random(10),
             'name' => $input['name'],
             'email' => $input['email'],
             'password' => Hash::make($input['password']),

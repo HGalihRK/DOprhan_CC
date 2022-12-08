@@ -19,7 +19,7 @@
                                 <!-- Header -->
                                 <div class="text-center">
                                     <h1 class="text-3xl leading-9 font-extrabold inline-flex items-center mb-1">
-                                        Halo
+                                        Halo, Developer!
                                     </h1>
                                     <p class="text-gray-500">
                                         Silakan membuat akun
@@ -32,25 +32,8 @@
 
                                 <form method="POST" action="{{ route('register') }}">
                                     @csrf
-
-                                    <div>
-                                        <x-jet-label for="role" value="{{ __('Daftar sebagai') }}" />
-                                        <div class="flex gap-6 mt-1">
-                                            <div class="space-x-1">
-                                                <input id="panti" class="peer/panti" type="radio" name="status"
-                                                    checked />
-                                                <label for="panti" class="peer-checked/panti:text-blue-500">Panti
-                                                    Asuhan</label>
-                                            </div>
-                                            <div class="space-x-1">
-                                                <input id="tutor" class="peer/tutor" type="radio"
-                                                    name="status" />
-                                                <label for="tutor"
-                                                    class="peer-checked/tutor:text-blue-500">Tutor</label>
-                                            </div>
-                                        </div>
-
-                                    </div>
+                                    <input type="hidden" value="Developer" name="role">
+                      
 
                                     <div class="mt-4">
                                         <x-jet-label for="name" value="{{ __('Nama') }}" />

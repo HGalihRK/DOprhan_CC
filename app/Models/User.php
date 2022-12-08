@@ -27,6 +27,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'user_type',
+        'api_key'
+
     ];
 
     public function orphanage()

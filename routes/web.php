@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Route::get('/documentation', function () {
     return view('documentation');
-});
+})->name('documentation');
 
 Route::middleware([
     'auth:sanctum',

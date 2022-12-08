@@ -13,6 +13,7 @@
     <meta name="owner"
         content="Nur Azizah, Oey Darryl Valencio Wijaya, Nathanael Abel Arianto, David Christian, Probo Krishnacahya, Haning Galih Rani Kumbara." />
     <meta name="theme-color" content="#3B82F6">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     {{-- Title --}}
     <title>@yield('title')</title>
