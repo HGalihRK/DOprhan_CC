@@ -13,16 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('orphan_course_bookings', function (Blueprint $table) {
+        Schema::create('orphan_crs', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger("course_booking_id");
-            $table->foreign("course_booking_id")->references("id")->on("course_bookings")
+            $table->unsignedBigInteger('competition_recommendation_id');
+            $table->foreign('competition_recommendation_id')->references('id')->on('competition_recommendations')
             ->onUpdate('cascade')
             ->onDelete('cascade');
-            $table->unsignedBigInteger("orphan_id");
-            $table->foreign("orphan_id")->references("id")->on("orphans")
+            $table->unsignedBigInteger('orphan_id');
+            $table->foreign('orphan_id')->references('id')->on('orphans')
             ->onUpdate('cascade')
             ->onDelete('cascade');
+            $table->text('description');
             $table->timestamps();
         });
     }
@@ -34,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('orphan_course_bookings');
+        Schema::dropIfExists('orphan_crs');
     }
 };

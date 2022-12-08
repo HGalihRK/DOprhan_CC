@@ -22,10 +22,10 @@ class CompetitionFactory extends Factory
         $faker2 = Faker::create('id_ID');
 
         return [
-            'title'=>$faker->sentence(),
-            'location'=>$faker2->city(),
-            'description'=>'Lorem Ipsum, Ini adalah deskripsi lomba',
-            'category'=>$faker->randomElement(Skill::all()->pluck('id'))
+            'name' => $faker->sentence(3),
+            'registration_start_date' => $faker2->dateTimeBetween($startDate = '+ 10 days', $endDate = '+ 100 days', $timezone = null),
+            'url' => $faker2->url(),
+            'description' => $faker->text(200),
         ];
     }
 }

@@ -25,11 +25,13 @@ class UserFactory extends Factory
     public function definition()
     {
         $faker = Faker::create('id_ID');
+        $rand_gender = $faker->randomElement(['Male', 'Female']);
 
         return [
             'email' => $faker->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'money' => random_int(10000, 3000000),
             'remember_token' => Str::random(10),
             'api_key' => Str::random(20),
         ];

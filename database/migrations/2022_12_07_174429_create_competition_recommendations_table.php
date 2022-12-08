@@ -1,4 +1,4 @@
-4<?php
+<?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -13,17 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('donations', function (Blueprint $table) {
+        Schema::create('competition_recommendations', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('orphanage_id');
-            $table->foreign("orphanage_id")->references('id')->on("orphanages")
+            $table->unsignedBigInteger('tutor_id');
+            $table->foreign('tutor_id')->references('id')->on('tutors')
             ->onUpdate('cascade')
             ->onDelete('cascade');
-            $table->string("donator_name")->nullable();
-            $table->integer("amount")->nullable();
-            $table->string("message");
-            $table->unsignedBigInteger('transaction_id');
-            $table->foreign('transaction_id')->references('id')->on("transactions")
+            $table->unsignedBigInteger('orphanage_id');
+            $table->foreign('orphanage_id')->references('id')->on('orphanages')
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
+            $table->unsignedBigInteger('competition_id');
+            $table->foreign('competition_id')->references('id')->on('competitions')
             ->onUpdate('cascade')
             ->onDelete('cascade');
             $table->timestamps();
@@ -37,6 +38,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('donations');
+        Schema::dropIfExists('competition_recommendations');
     }
 };

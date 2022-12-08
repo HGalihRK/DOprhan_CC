@@ -31,15 +31,17 @@ class User extends Authenticatable
         'api_key'
 
     ];
-
-    public function orphanage()
+    public function transactions()
     {
-        return $this->hasOne(Orphanage::class);
+        return $this->hasMany(Transaction::class, 'user_id');
     }
-
     public function tutor()
     {
         return $this->hasOne(Tutor::class);
+    }
+    public function orphanage()
+    {
+        return $this->hasOne(Orphanage::class);
     }
 
     /**

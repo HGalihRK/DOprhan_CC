@@ -18,20 +18,22 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-      UserSeeder::class,
-      TutorSeeder::class,
-      DaySeeder::class,
-      DayTimeRangeSeeder::class,
-      TutorDayTimeRangeSeeder::class,
-      OrphanageSeeder::class,
-      OrphanSeeder::class,
-      SkillSeeder::class,
-      CompetitionSeeder::class,
-      CourseSeeder::class,
-      CourseBookingSeeder::class,
-      OrphanCourseBookingSeeder::class,
-      CourseBookingDayTimeRangeSeeder::class,
-      DonationSeeder::class,
+          UserSeeder::class,
+          TutorSeeder::class,
+          DaySeeder::class,
+          DayTimeRangeSeeder::class,
+          TutorDayTimeRangeSeeder::class,
+          OrphanageSeeder::class,
+          OrphanSeeder::class,
+          SkillSeeder::class,
+          CompetitionSeeder::class,
+          CourseSeeder::class,
+          CourseBookingSeeder::class,
+          OrphanCourseBookingSeeder::class,
+          CourseBookingDayTimeRangeSeeder::class,
+          DonationSeeder::class,
+          CompetitionRecommendationSeeder::class,
+          OrphanCrSeeder::class,
         ]);
     }
 }
