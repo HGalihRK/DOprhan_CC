@@ -11,14 +11,7 @@
                 <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
                     <!-- Current: "border-blue-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
                     <a href="{{ route('documentation') }}"
-                        class="pages text-gray-500 border-transparent hover:text-blue-500 active:border-blue-500 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Dokumentasi</a>
-                    {{-- <a href="/cari"
-                        class="pages text-gray-500 border-transparent hover:text-blue-500 active:border-blue-500 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Cari</a>
-                    <a href="/lomba"
-                        class="pages text-gray-500 border-transparent hover:text-blue-500 active:border-blue-500 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Lomba</a>
-                    <a href="/donasi"
-                        class="pages text-gray-500 border-transparent hover:text-blue-500 active:border-blue-500 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Donasi</a>
-                </div> --}}
+                        class="text-gray-500 border-transparent hover:text-blue-500 active:text-blue-500 inline-flex items-center px-1 pt-1 border-b-2 font-medium {{ request()->routeIs('documentation') ? 'border-blue-500 text-blue-500 font-semibold border-b-2' : '' }}">Dokumentasi</a>
                 </div>
             </div>
             @auth
@@ -105,14 +98,8 @@
     <div class="sm:hidden" id="mobile-menu">
         <div class="pt-2 pb-3 space-y-1">
             <!-- Current: "bg-blue-50 border-blue-500 text-blue-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
-            <a href="href="{{ route('documentation') }}"
-                class="pages text-gray-500 border-transparent hover:text-blue-500 active:border-blue-500 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Dokumentasi</a>
-            {{-- <a href="/cari"
-                class="pages text-gray-500 border-transparent hover:text-blue-500 active:border-blue-500 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Cari</a>
-            <a href="/lomba"
-                class="pages text-gray-500 border-transparent hover:text-blue-500 active:border-blue-500 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Lomba</a>
-            <a href="/donasi"
-                class="pages text-gray-500 border-transparent hover:text-blue-500 active:border-blue-500 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Donasi</a> --}}
+            <a href="{{ route('documentation') }}"
+                class="text-gray-500 border-transparent hover:text-blue-500 active:text-blue-500 inline-flex items-center px-1 pt-1 border-b-2 font-medium {{ request()->routeIs('documentation') ? 'border-blue-500 text-blue-500 font-semibold border-b-2' : '' }}">Dokumentasi</a>
         </div>
         @auth
             <div class="pt-4 pb-3 border-t border-gray-200">
