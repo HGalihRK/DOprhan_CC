@@ -11,7 +11,7 @@
     <meta name="description"
         content="D'Orphan adalah Pengembangan Aplikasi Web untuk Mengasah Bakat dan Minat Anak Panti Asuhan." />
     <meta name="owner"
-        content="Nur Azizah, Oey Darryl Valencio Wijaya, Nathanael Abel Arianto, David Christian, Probo Krishnacahya, Haning Galih Rani Kumbara." />
+        content="Nur Azizah, Nathanael Abel Arianto, Probo Krishnacahya, Haning Galih Rani Kumbara." />
     <meta name="theme-color" content="#3B82F6">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
