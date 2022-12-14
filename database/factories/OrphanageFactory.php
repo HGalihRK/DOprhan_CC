@@ -1,11 +1,9 @@
 <?php
 
 namespace Database\Factories;
-use Faker\Factory as Faker;
 
+use Faker\Factory as Faker;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Faker\Factory as Faker;
-
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Orphanage>

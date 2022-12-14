@@ -27,8 +27,7 @@
                 <x-api-description>
                     <x-slot name="title">Competition</x-slot>
                     <x-slot name="description">Method Competition digunakan untuk mendapat data kompetisi/perlombaan
-                        yang
-                        terdaftar pada sistem</x-slot>
+                        yang terdaftar pada sistem</x-slot>
                     <x-slot name="url">{{ route('api-competition') }}</x-slot>
                     <x-slot name="parameter">
                         <x-api-description-item parameter=id wajib=Tidak tipe=Integer keterangan="ID Competition" />
