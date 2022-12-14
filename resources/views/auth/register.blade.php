@@ -19,7 +19,7 @@
                                 <!-- Header -->
                                 <div class="text-center">
                                     <h1 class="text-3xl leading-9 font-extrabold inline-flex items-center mb-1">
-                                        Halo, Developer!
+                                        Halo
                                     </h1>
                                     <p class="text-gray-500">
                                         Silakan membuat akun
@@ -33,7 +33,6 @@
                                 <form method="POST" action="{{ route('register') }}">
                                     @csrf
                                     <input type="hidden" value="Developer" name="role">
-                      
 
                                     <div class="mt-4">
                                         <x-jet-label for="name" value="{{ __('Nama') }}" />
@@ -70,7 +69,8 @@
 
                                     <div class="flex items-center justify-center gap-1">
                                         <p>Sudah punya akun?</p>
-                                        <a href="{{ route('login') }}" class="font-bold">{{ __('Masuk') }}</a>
+                                        <a href="{{ route('login') }}"
+                                            class="font-bold text-blue-500">{{ __('Masuk') }}</a>
                                     </div>
                                 </form>
                             </div>

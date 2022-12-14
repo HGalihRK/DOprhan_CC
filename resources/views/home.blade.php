@@ -14,8 +14,8 @@
                     <br>
                 </div>
                 <div>
-                    <a href="{{ route('/') }}">
-                        <x-hero-button>Temukan Tutor</x-hero-button>
+                    <a href="{{ route('documentation') }}">
+                        <x-hero-button>Jelajahi Dokumentasi</x-hero-button>
                     </a>
                 </div>
             </div>
@@ -72,7 +72,7 @@
                             stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </x-slot:icon>
-                <x-slot:title>/ Tutor untuk Sesi Kursus</x-slot:title>
+                <x-slot:title>Cari Tutor untuk Sesi Kursus</x-slot:title>
             </x-hero-fitur-card>
             <x-hero-fitur-card>
                 <x-slot:icon>
@@ -110,60 +110,6 @@
         </div>
     </div>
 
-    {{-- SDGs --}}
-    <div class="flex flex-col space-y-4">
-        <div>
-            <p class="text-3xl leading-10 font-bold">Mendukung Sustainable Development Goals &#40;SDGs&#41;</p>
-            <p class="text-xl leading-8 text-gray-500">Marilah bersama-sama turut mewujudkan kelancaran SDGs</p>
-        </div>
-        <div class="space-y-2">
-            <div class="grid place-items-center gap-x-12 gap-y-2 md:flex">
-                <div class="w-fit">
-                    <img src="{{ url('img/home-sdgs4.svg') }}" alt="SDGs 4" />
-                </div>
-                <div class="w-fit">
-                    <p class="text-lg leading-8 font-semibold">Gol ke&#45;4 &#40;Pendidikan Berkualitas&#41;</p>
-                    <q class="text-base">Menjamin Kualitas Pendidikan yang Inklusif dan Merata serta Meningkatkan
-                        Kesempatan
-                        Belajar Sepanjang Hayat untuk Semua</q>
-                    <ul class="list-disc text-base text-gray-500 ml-8">
-                        <li>Target ke&#45;4.4&#58; Pada tahun 2030, meningkatkan secara signifikan jumlah pemuda dan
-                            orang
-                            dewasa yang memiliki keterampilan yang relevan, termasuk keterampilan teknik dan kejuruan,
-                            untuk
-                            pekerjaan, pekerjaan yang layak dan kewirausahaan.</li>
-                        <li>Target ke&#45;4.7&#58; Pada tahun 2030, menjamin semua peserta didik memperoleh pengetahuan
-                            dan keterampilan yang diperlukan untuk meningkatkan pembangunan berkelanjutan, termasuk
-                            antara lain, melalui pendidikan untuk pembangunan berkelanjutan dan gaya hidup yang
-                            berkelanjutan, hak asasi manusia, kesetaraan gender, promosi budaya damai dan non kekerasan,
-                            kewarganegaraan global dan penghargaan terhadap keanekaragaman budaya dan kontribusi budaya
-                            terhadap pembangunan berkelanjutan.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="grid place-items-center gap-x-12 gap-y-2 md:flex">
-                <div class="w-fit">
-                    <img src="{{ url('img/home-sdgs8.svg') }}" alt="SDGs 8" />
-                </div>
-                <div class="w-fit">
-                    <p class="text-lg leading-8 font-semibold">Gol ke&#45;8 &#40;Pekerjaan Layak dan Pertumbuhan
-                        Ekonomi&#41;</p>
-                    <q class="text-base">Meningkatkan Pertumbuhan Ekonomi yang Inklusif dan Berkelanjutan, Kesempatan
-                        Kerja yang Produktif dan Menyeluruh, serta Pekerjaan yang Layak untuk Semua</q>
-                    <ul class="list-disc text-base text-gray-500 ml-8">
-                        <li>Target ke&#45;8.3&#58; Menggalakkan kebijakan pembangunan yang mendukung kegiatan produktif,
-                            penciptaan lapangan kerja layak, kewirausahaan, kreativitas dan inovasi, dan mendorong
-                            formalisasi dan pertumbuhan usaha mikro, kecil, dan menengah, termasuk melalui akses
-                            terhadap jasa keuangan.</li>
-                        <li>Target ke&#45;8.5&#58; Pada tahun 2030, mencapai pekerjaan tetap dan produktif dan pekerjaan
-                            yang layak bagi semua perempuan dan laki-laki, termasuk bagi pemuda dan penyandang
-                            difabilitas, dan upah yang sama untuk pekerjaan yang sama nilainya.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
     {{-- Kategori --}}
     <div class="flex flex-col space-y-4">
         <div>
@@ -186,30 +132,14 @@
                 </svg>
             </div>
             <div>
-                <p class="text-3xl text-white leading-10 font-bold">Bergabung sebagai Tutor handal</p>
-                <p class="text-xl leading-8 text-gray-200">Berbagi pengalaman dan salurkan ilmu untuk mempertajam
-                    kemampuan peserta kursus Anda</p>
+                <p class="text-3xl text-white leading-10 font-bold">Belajar dengan para Tutor handal</p>
+                <p class="text-xl leading-8 text-gray-200">Tumbuhkan keahlian Anda bersama para pakarnya</p>
             </div>
             <div>
-                <a href="{{ route('register') }}">
-                    <x-primary-button>Berikan Kursus</x-primary-button>
+                <a href="{{ route('documentation') }}">
+                    <x-primary-button>Jelajahi Dokumentasi</x-primary-button>
                 </a>
             </div>
         </div>
-    </div>
-
-    {{-- Donasi --}}
-    <div class="bg-home-donasi-background flex flex-col items-center rounded-2xl shadow gap-4 p-8">
-        <img src="{{ url('img/home-donasi-illustration.svg') }}" alt="Donasi" />
-        <div class="text-center">
-            <p class="text-3xl leading-10 font-bold">Donasi praktis</p>
-            <p class="text-xl leading-8 text-gray-500">Mewadahi kemudahan proses berdonasi dari para Donatur untuk
-                Panti Asuhan</p>
-        </div>
-        <a href="{{ route('/') }}">
-            <x-primary-button>
-                Donasi Sekarang
-            </x-primary-button>
-        </a>
     </div>
 </x-guest-layout>

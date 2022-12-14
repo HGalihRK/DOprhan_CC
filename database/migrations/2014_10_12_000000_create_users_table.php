@@ -20,14 +20,13 @@ return new class() extends Migration
             $table->integer('money')->default(0);
             $table->string('phone_number')->nullable();
             $table->enum('gender', ['Male', 'Female']);
-            $table->enum('user_type', ['Pengurus Panti', 'Tutor','Developer']);
+            $table->enum('user_type', ['Pengurus Panti', 'Tutor', 'Developer']);
             $table->string('api_key')->nullable()->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
-            $table->text('address')->nullable();
             $table->string('address')->nullable();
             $table->timestamps();
         });
