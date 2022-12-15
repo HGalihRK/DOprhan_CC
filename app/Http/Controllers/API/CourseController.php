@@ -19,20 +19,20 @@ class CourseController extends Controller
      */
     public function index(Request $request)
     {
-      //return all course if id exist, 
-      //return course by skillId 
-      //return course by tutorId
-        if($request->id){
+        //return all course if id exist, 
+        //return course by skill_id 
+        //return course by tutor_id
+        if ($request->id) {
             return ['result' => CourseResource::collection(Course::where('id', $request->id)->get())];
         }
-        if($request->skillId && $request->tutorId){
-            return ['result' => CourseResource::collection(Course::where('skill_id', $request->skillId)->where('tutor_id', $request->tutorId)->get())];
+        if ($request->skill_id && $request->tutor_id) {
+            return ['result' => CourseResource::collection(Course::where('skill_id', $request->skill_id)->where('tutor_id', $request->tutor_id)->get())];
         }
-        if($request->skillId){
-            return ['result' => CourseResource::collection(Course::where('skill_id', $request->skillId)->get())];
+        if ($request->skill_id) {
+            return ['result' => CourseResource::collection(Course::where('skill_id', $request->skill_id)->get())];
         }
-        if($request->tutorId){
-            return ['result' => CourseResource::collection(Course::where('tutor_id', $request->tutorId)->get())];
+        if ($request->tutor_id) {
+            return ['result' => CourseResource::collection(Course::where('tutor_id', $request->tutor_id)->get())];
         }
         return ['result' => CourseResource::collection(Course::all())];
     }
