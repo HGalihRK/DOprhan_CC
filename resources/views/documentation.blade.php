@@ -12,28 +12,12 @@
             <div>
                 <x-api-description>
                     <x-slot name="title">Competition</x-slot>
-                    <x-slot name="description">Method Competition digunakan untuk mendapatkan data perlombaan yang
-                        terdaftar
-                        pada sistem</x-slot>
-                    <x-slot name="url">{{ route('api-competition') }}</x-slot>
-                    <x-slot name="parameter">
-                        <x-api-description-item parameter=id wajib=Tidak tipe=Integer keterangan="ID Competition" />
-                    </x-slot>
-                    <x-slot name="sukses">
-                    </x-slot>
-                    <x-slot name="gagal">
-                    </x-slot>
-                </x-api-description>
-            </div>
-            {{-- untuk buat api documentation --}}
-            <div>
-                <x-api-description>
-                    <x-slot name="title">Competition</x-slot>
                     <x-slot name="description">Method Competition digunakan untuk mendapatkan data perlombaan
                         yang terdaftar pada sistem</x-slot>
                     <x-slot name="url">{{ route('api-competition') }}</x-slot>
                     <x-slot name="parameter">
                         <x-api-description-item parameter=id wajib=Tidak tipe=Integer keterangan="ID Competition" />
+                        <x-api-description-item parameter=tutor_id wajib=Tidak tipe=Integer keterangan="ID Tutor" />
                         <x-api-description-item parameter=skill_id wajib=Ya tipe=Integer keterangan="ID Kategori" />
                     </x-slot>
                     <x-slot name="sukses">
@@ -53,14 +37,13 @@
     // Sukses - Competition
     var response = {
         "result": {
-            "id": 2,
-            "tutor_id": 1,
-            "title": "Quibusdam eveniet ipsam nisi accusantium sapiente.",
-            "location": "Tanjungbalai",
-            "description": "Lorem Ipsum, Ini adalah deskripsi lomba",
-            "category": "4",
-            "created_at": "2022 - 12 - 07 T00: 02: 10.000000 Z",
-            "updated_at": "2022 - 12 - 07 T00: 02: 10.000000 Z"
+            "id": 1,
+            "name": "Non sed ipsam exercitationem.",
+            "registration_start_date": "2023-01-14 17:37:55",
+            "url": "http://ardianto.my.id/nam-a-nobis-quia-quo-vero-velit",
+            "description": "Rerum culpa magni ut est deleniti culpa dolorum. Suscipit aperiam quis molestias voluptatem. Assumenda similique voluptatum rerum ut. Laboriosam qui repudiandae quidem et libero.",
+            "created_at": "2022-12-14T07:37:32.000000Z",
+            "updated_at": "2022-12-14T07:37:32.000000Z"
         }
     };
 

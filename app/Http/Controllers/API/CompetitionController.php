@@ -20,14 +20,11 @@ class CompetitionController extends Controller
       if($request->id){
         return ['result' => CompetitionResource::collection(Competition::where('id', $request->id)->get())];
       }
-      if($request->skillId && $request->tutorId){
-        return ['result' => CompetitionResource::collection(Competition::where('skill_id', $request->skillId)->where('tutor_id', $request->tutorId)->get())];
+      if($request->skill_id && $request->tutor_id){
+        return ['result' => CompetitionResource::collection(Competition::where('skill_id', $request->skill_id)->where('tutor_id', $request->tutor_id)->get())];
       }
-      if($request->skillId){
-        return ['result' => CompetitionResource::collection(Competition::where('skill_id', $request->skillId)->get())];
-      }
-      if($request->tutorId){
-        return ['result' => CompetitionResource::collection(Competition::where('tutor_id', $request->tutorId)->get())];
+      if($request->skill_id){
+        return ['result' => CompetitionResource::collection(Competition::where('skill_id', $request->skill_id)->get())];
       }
       return ['result' => CompetitionResource::collection(Competition::all())];        
     }

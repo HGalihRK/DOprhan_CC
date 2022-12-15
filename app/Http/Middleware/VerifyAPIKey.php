@@ -17,9 +17,9 @@ class VerifyAPIKey
      */
     public function handle(Request $request, Closure $next)
     {
-        if(User::where('api_key', $request->api_key)->first()){
+        if (User::where('api_key', $request->header('api_key'))->first()) {
             return $next($request);
-        }else{
+        } else {
             return response(['result' => 'Invalid API Key']);
         }
     }
