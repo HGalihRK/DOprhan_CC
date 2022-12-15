@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\OrphanageResource;
+use App\Models\Orphan;
 use App\Models\Orphanage;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,7 @@ class OrphanageController extends Controller
         }
         // return orphanage by orphan id
         if ($request->orphan_id) {
-            return ['result' => OrphanageResource::collection(Orphanage::where('orphan_id', $request->orphan_id)->get())];
+            return ['result' => OrphanageResource::collection(Orphan::where('id', $request->orphan_id)->orphanage->get())];
         }
         // return orphanage by id and user id
         if ($request->id && $request->user_id) {
