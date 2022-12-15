@@ -1,8 +1,8 @@
 <div>
-    <h3 class="text-3xl font-semibold">{{ $title }}</h3>
-    <h4 class="text-2xl mt-5 mb-3">Ringkasan</h4>
+    <h3 class="text-2xl font-semibold">{{ $title }}</h3>
+    <h4 class="text-xl mt-5">Ringkasan</h4>
     <p class="text-gray-500 mb-5">{{ $description }}</p>
-    <h4 class="text-2xl mt-5 mb-3">Request</h4>
+    <h4 class="text-xl mt-5">Request</h4>
 
     <div x-data="{ tabs: 0 }">
         <div>
@@ -20,7 +20,6 @@
             </nav>
         </div>
 
-        <!-- This example requires Tailwind CSS v2.0+ -->
         <div x-show="tabs === 0">
             <div class="mt-4 flex flex-col">
                 <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
