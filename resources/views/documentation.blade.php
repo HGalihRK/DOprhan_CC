@@ -2,16 +2,19 @@
 
 <x-guest-layout>
     <div class="flex flex-col space-y-8">
-        <div>
-            <p class="text-4xl font-extrabold text-gray-900">Layanan Antarmuka Pemrograman Aplikasi untuk semua
-                Pengembang</p>
+        <div class="space-y-2">
+            <p class="text-4xl font-extrabold text-gray-900">Kembangkan aplikasi untuk turut mendukung perkembangan Bakat
+                dan Minat Anak Panti Asuhan</p>
+            <p class="text-gray-500">Pelajari cara mengakses layanan Antarmuka Pemrograman Aplikasi Publik yang
+                D&#39;Orphan sediakan melalui dokumentasi berikut ini</p>
         </div>
         <div class="bg-white rounded-2xl shadow p-8 space-y-8">
             <div>
                 <x-api-description>
                     <x-slot name="title">Competition</x-slot>
-                    <x-slot name="description">Method Competition digunakan untuk mendapat data kompetisi/perlombaan yang
-                        terdaftar pada sistem</x-slot>
+                    <x-slot name="description">Method Competition digunakan untuk mendapatkan data perlombaan yang
+                        terdaftar
+                        pada sistem</x-slot>
                     <x-slot name="url">{{ route('api-competition') }}</x-slot>
                     <x-slot name="parameter">
                         <x-api-description-item parameter=id wajib=Tidak tipe=Integer keterangan="ID Competition" />
@@ -26,7 +29,7 @@
             <div>
                 <x-api-description>
                     <x-slot name="title">Competition</x-slot>
-                    <x-slot name="description">Method Competition digunakan untuk mendapat data kompetisi/perlombaan
+                    <x-slot name="description">Method Competition digunakan untuk mendapatkan data perlombaan
                         yang terdaftar pada sistem</x-slot>
                     <x-slot name="url">{{ route('api-competition') }}</x-slot>
                     <x-slot name="parameter">

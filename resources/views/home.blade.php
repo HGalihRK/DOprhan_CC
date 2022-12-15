@@ -7,10 +7,10 @@
             <div class="flex flex-col space-y-0 md:space-y-4 justify-center">
                 <div class="space-y-2">
                     <p class="text-4xl font-extrabold">
-                        D&#39;Orphan hadir untuk proses pembelajaran yang lebih optimal
+                        D&#39;Orphan menyediakan sistem Platform as a Service
                     </p>
-                    <p class="text-2xl leading-8 text-gray-500">Gali serta tingkatkan kualitas bakat dan minat
-                        anak-anak Panti Asuhan melalui D&#39;Orphan</p>
+                    <p class="text-2xl leading-8 text-gray-500">Layanan Antarmuka Pemrograman Aplikasi Publik untuk semua
+                        Pengembang</p>
                     <br>
                 </div>
                 <div>
@@ -38,74 +38,58 @@
     {{-- Fitur --}}
     <div class="flex flex-col space-y-4" id="fitur">
         <div>
-            <p class="text-3xl leading-10 font-bold">Kenali D&#39;Orphan lebih lanjut</p>
+            <h3 class="text-3xl leading-10 font-bold">Kenali D&#39;Orphan lebih lanjut</h3>
             <div class="text-xl leading-8 text-gray-500">
-                <span class="font-bold">D'Orphan</span>&nbsp;<span>adalah Pengembangan Aplikasi Web
-                    untuk Mengasah Bakat dan Minat Anak
-                    Panti Asuhan</span>
+                <span class="font-bold">D'Orphan</span>&nbsp;<span>menghadirkan dokumentasi berbasis Aplikasi Web untuk
+                    mendukung perkembangan Bakat dan Minat Anak Panti Asuhan</span>
             </div>
         </div>
         <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
             <!-- Card -->
-            <x-hero-fitur-card>
+            <x-home-fitur-card>
                 <x-slot:icon>
-                    <svg width=72 height=72 viewBox="0 0 98 97" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        class="inline-block">
-                        <circle cx="49" cy="48.5" r="47.5" stroke="#3B82F6" stroke-width="2" />
-                        <path
-                            d="M41.0834 38.6042C41.0834 42.9764 44.6278 46.5208 49.0001 46.5208C53.3723 46.5208 56.9167 42.9764 56.9167 38.6042C56.9167 34.2319 53.3723 30.6875 49.0001 30.6875C44.6278 30.6875 41.0834 34.2319 41.0834 38.6042Z"
-                            stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M49.0001 52.4583C56.6515 52.4583 62.8542 58.6611 62.8542 66.3125H35.1459C35.1459 58.6611 41.3486 52.4583 49.0001 52.4583Z"
-                            stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <svg width=72 height=72 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="#3B82F6"
+                        class="inline-block rounded-full border-2 border-blue-500 p-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                     </svg>
                 </x-slot:icon>
-                <x-slot:title>Publikasi Profil Panti dan Tutor</x-slot:title>
-            </x-hero-fitur-card>
-            <x-hero-fitur-card>
+                <x-slot:title>Informasi Panti Asuhan dan Tutor di Surabaya</x-slot:title>
+            </x-home-fitur-card>
+            <x-home-fitur-card>
                 <x-slot:icon>
-                    <svg width=72 height=72 viewBox="0 0 98 97" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        class="inline-block">
-                        <circle cx="49" cy="48.5" r="47.5" stroke="#3B82F6" stroke-width="2" />
-                        <path
-                            d="M31.1875 66.3125L43.0625 54.4375M39.1042 44.5417C39.1042 52.1931 45.3069 58.3958 52.9583 58.3958C60.6098 58.3958 66.8125 52.1931 66.8125 44.5417C66.8125 36.8902 60.6098 30.6875 52.9583 30.6875C45.3069 30.6875 39.1042 36.8902 39.1042 44.5417Z"
-                            stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <svg width=72 height=72 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="#3B82F6"
+                        class="inline-block rounded-full border-2 border-blue-500 p-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
                     </svg>
                 </x-slot:icon>
-                <x-slot:title>Cari Tutor untuk Sesi Kursus</x-slot:title>
-            </x-hero-fitur-card>
-            <x-hero-fitur-card>
+                <x-slot:title>Tarif kursus berdasarkan Kategori dan Tutor</x-slot:title>
+            </x-home-fitur-card>
+            <x-home-fitur-card>
                 <x-slot:icon>
-                    <svg width=72 height=72 viewBox="0 0 98 97" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        class="inline-block">
-                        <circle cx="49" cy="48.5" r="47.5" stroke="#3B82F6" stroke-width="2" />
-                        <path
-                            d="M35.1458 48.5L31.1875 30.6875L66.8125 48.5L31.1875 66.3125L35.1458 48.5ZM35.1458 48.5L50.9792 48.5"
-                            stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <svg width=72 height=72 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="#3B82F6"
+                        class="inline-block rounded-full border-2 border-blue-500 p-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                     </svg>
                 </x-slot:icon>
-                <x-slot:title>Permintaan Sesi Kursus</x-slot:title>
-            </x-hero-fitur-card>
-            <x-hero-fitur-card>
+                <x-slot:title>Informasi riwayat kursus dari Panti Asuhan</x-slot:title>
+            </x-home-fitur-card>
+            <x-home-fitur-card>
                 <x-slot:icon>
-                    <svg width=72 height=72 viewBox="0 0 98 97" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        class="inline-block">
-                        <circle cx="49" cy="48.5" r="47.5" stroke="#3B82F6" stroke-width="2" />
-                        <g clip-path="url(#clip0_1336_22064)">
-                            <path
-                                d="M49.951 27.6766C49.6517 26.7554 48.3483 26.7554 48.049 27.6766L43.8918 40.4693C43.758 40.8813 43.374 41.1602 42.9408 41.1602L29.4897 41.1607C28.521 41.1608 28.1183 42.4003 28.9019 42.9697L39.7838 50.8765C40.1343 51.1312 40.2729 51.5825 40.1471 51.9945L35.9909 64.7874C35.6916 65.7087 36.746 66.4748 37.5297 65.9055L48.4122 57.9995C48.7627 57.7449 49.2373 57.7449 49.5878 57.9995L60.4703 65.9055C61.254 66.4748 62.3084 65.7087 62.0091 64.7874L57.8529 51.9945C57.7191 51.5825 57.8657 51.1312 58.2162 50.8765L69.0981 42.9697C69.8817 42.4003 69.479 41.1608 68.5103 41.1607L55.0592 41.1602C54.626 41.1602 54.242 40.8813 54.1082 40.4693L49.951 27.6766Z"
-                                stroke="#3B82F6" stroke-width="2" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_1336_22064">
-                                <rect width="47.5" height="47.5" fill="white"
-                                    transform="matrix(-1 0 0 1 72.75 24.75)" />
-                            </clipPath>
-                        </defs>
+                    <svg width=72 height=72 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="#3B82F6"
+                        class="inline-block rounded-full border-2 border-blue-500 p-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
                     </svg>
                 </x-slot:icon>
-                <x-slot:title>Rekomendasi Perlombaan</x-slot:title>
-            </x-hero-fitur-card>
+                <x-slot:title>Informasi Kompetisi dari rekomendasi Tutor</x-slot:title>
+            </x-home-fitur-card>
             <!-- END Card -->
         </div>
     </div>
@@ -113,7 +97,7 @@
     {{-- Kategori --}}
     <div class="flex flex-col space-y-4">
         <div>
-            <p class="text-3xl leading-10 font-bold">Beragam kategori kursus tersedia</p>
+            <h3 class="text-3xl leading-10 font-bold">Beragam kategori kursus tersedia</h3>
         </div>
         <div>
             <img src="{{ url('img/home-kategori.jpg') }}" alt="Kategori" />
@@ -135,11 +119,25 @@
                 <p class="text-3xl text-white leading-10 font-bold">Belajar dengan para Tutor handal</p>
                 <p class="text-xl leading-8 text-gray-200">Tumbuhkan keahlian Anda bersama para pakarnya</p>
             </div>
-            <div>
-                <a href="{{ route('documentation') }}">
-                    <x-primary-button>Jelajahi Dokumentasi</x-primary-button>
-                </a>
-            </div>
+        </div>
+    </div>
+
+    {{-- Statistik --}}
+    <div class="flex flex-col space-y-4">
+        <h3 class="text-3xl leading-10 font-bold">D&#39;Orphan dalam angka</h3>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <x-home-statistik-card>
+                <x-slot:title>Panti Asuhan di Surabaya</x-slot:title>
+                <x-slot:number>100</x-slot:number>
+            </x-home-statistik-card>
+            <x-home-statistik-card>
+                <x-slot:title>Tutor di Surabaya</x-slot:title>
+                <x-slot:number>100</x-slot:number>
+            </x-home-statistik-card>
+            <x-home-statistik-card>
+                <x-slot:title>Kategori kursus</x-slot:title>
+                <x-slot:number>100</x-slot:number>
+            </x-home-statistik-card>
         </div>
     </div>
 </x-guest-layout>

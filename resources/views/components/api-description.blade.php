@@ -1,25 +1,23 @@
 <div>
     <h3 class="text-3xl font-semibold">{{ $title }}</h3>
-    <h4 class="text-2xl mt-5 mb-3 text-gray-500">Ringkasan</h4>
+    <h4 class="text-2xl mt-5 mb-3">Ringkasan</h4>
     <p class="text-gray-500 mb-5">{{ $description }}</p>
-    <h4 class="text-2xl mt-5 mb-3 text-gray-500">Request</h4>
+    <h4 class="text-2xl mt-5 mb-3">Request</h4>
 
     <div x-data="{ tabs: 0 }">
         <div>
-            <div class="">
-                <nav class="-mb-px flex space-x-8" aria-label="Tabs">
-                    <!-- Current: "border-blue-500 text-blue-600", Default: "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300" -->
-                    <a @click="tabs = 0"
-                        class="border-transparent text-blue-500 hover:text-blue-500 hover:border-blue-500 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
-                        URL </a>
-                    <a @click="tabs = 1"
-                        class="border-transparent text-blue-500 hover:text-blue-500 hover:border-blue-500 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
-                        Parameter </a>
-                    <a @click="tabs = 2"
-                        class="border-transparent text-blue-500 hover:text-blue-500 hover:border-blue-500 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
-                        Response </a>
-                </nav>
-            </div>
+            <nav class="-mb-px flex space-x-8" aria-label="Tabs">
+                <!-- Current: "border-blue-500 text-blue-600", Default: "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300" -->
+                <a @click="tabs = 0"
+                    class="cursor-pointer border-transparent text-blue-500 hover:text-blue-500 hover:border-blue-500 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                    URL </a>
+                <a @click="tabs = 1"
+                    class="cursor-pointer border-transparent text-blue-500 hover:text-blue-500 hover:border-blue-500 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                    Parameter </a>
+                <a @click="tabs = 2"
+                    class="cursor-pointer border-transparent text-blue-500 hover:text-blue-500 hover:border-blue-500 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                    Response </a>
+            </nav>
         </div>
 
         <!-- This example requires Tailwind CSS v2.0+ -->

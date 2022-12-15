@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords"
-        content="D'Orphan, Web Application, Bakat dan Minat, Panti Asuhan, Informatika Universitas Ciputra Surabaya" />
+        content="D'Orphan, Application Programming Interface, Bakat dan Minat, Panti Asuhan, Informatika Universitas Ciputra Surabaya" />
     <meta name="description"
-        content="D'Orphan - Web adalah Pengembangan Aplikasi Web untuk Mengasah Bakat dan Minat Anak Panti Asuhan." />
+        content="D'Orphan - API adalah sistem Platform as a Service berupa layanan Antarmuka Pemrograman Aplikasi Publik untuk semua Pengembang dengan dokumentasi berbasis Aplikasi Web untuk mendukung perkembangan Bakat dan Minat Anak Panti Asuhan." />
     <meta name="owner" content="Nur Azizah, Nathanael Abel Arianto, Probo Krishnacahya, Haning Galih Rani Kumbara." />
     <meta name="theme-color" content="#3B82F6">
 
