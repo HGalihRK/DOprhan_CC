@@ -11,8 +11,19 @@ class CompetitionRecommendation extends Model
     protected $guarded = [
         'id',
     ];
+
     public function orphanage()
     {
         return $this->belongsTo(Orphanage::class);
+    }
+
+    public function tutor()
+    {
+        return $this->belongsTo(Tutor::class);
+    }
+
+    public function competition()
+    {
+        return $this->belongsTo(Competition::class);
     }
 }

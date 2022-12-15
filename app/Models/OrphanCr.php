@@ -11,8 +11,14 @@ class OrphanCr extends Model
     protected $guarded = [
         'id',
     ];
+
     public function orphan()
     {
         return $this->belongsTo(Orphan::class);
+    }
+
+    public function competition()
+    {
+        return $this->belongsTo(Competition::class);
     }
 }
