@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\TutorResource;
+use App\Models\Course;
 use App\Models\Tutor;
 use Illuminate\Http\Request;
 
@@ -21,28 +22,13 @@ class TutorController extends Controller
             return ['result' => TutorResource::collection(Tutor::where('id', $request->id)->get())];
         }
         // return tutor by user id
-        if ($request->userId) {
-            return ['result' => TutorResource::collection(Tutor::where('user_id', $request->userId)->get())];
+        if ($request->user_id) {
+            return ['result' => TutorResource::collection(Tutor::where('user_id', $request->user_id)->get())];
         }
-        // return tutor by orphan id
-        if ($request->orphanId) {
-            return ['result' => TutorResource::collection(Tutor::where('orphan_id', $request->orphanId)->get())];
-        }
-        // return tutor by id and user id
-        if ($request->id && $request->userId) {
-            return ['result' => TutorResource::collection(Tutor::where('id', $request->id)->where('user_id', $request->userId)->get())];
-        }
-        // return tutor by id and orphan id
-        if ($request->id && $request->orphanId) {
-            return ['result' => TutorResource::collection(Tutor::where('id', $request->id)->where('orphan_id', $request->orphanId)->get())];
-        }
-        // return tutor by user id and orphan id
-        if ($request->userId && $request->orphanId) {
-            return ['result' => TutorResource::collection(Tutor::where('user_id', $request->userId)->where('orphan_id', $request->orphanId)->get())];
-        }
-        // return tutor by id, user id and orphan id
-        if ($request->id && $request->userId && $request->orphanId) {
-            return ['result' => TutorResource::collection(Tutor::where('id', $request->id)->where('user_id', $request->userId)->where('orphan_id', $request->orphanId)->get())];
+        // return tutor by skill id
+        if ($request->skill_id) {
+            $course = Course::where('skill_id', $request->skill_id)->pluck('tutor_id');
+            return ['result' => TutorResource::collection(Tutor::whereIn('id', $course)->get())];
         }
         // return all tutor if id not exist
         return ['result' => TutorResource::collection(Tutor::all())];
