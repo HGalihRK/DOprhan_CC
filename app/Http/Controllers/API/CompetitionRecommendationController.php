@@ -17,7 +17,7 @@ class CompetitionRecommendationController extends Controller
     public function index(Request $request)
     {
         if ($request->id) {
-            return ['result' => CompetitionRecommendationResource::collection(CompetitionRecommendation::findOrFail('id', $request->id))];
+            return ['result' => CompetitionRecommendationResource::collection(CompetitionRecommendation::findOrFail($request->id))];
         }
         if ($request->tutor_id && $request->orphanage_id) {
             return ['result' => CompetitionRecommendationResource::collection(CompetitionRecommendation::where('tutor_id', $request->tutor_id)->where('orphanage_id', $request->orphanage_id)->get())];
