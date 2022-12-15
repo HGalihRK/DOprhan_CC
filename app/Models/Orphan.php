@@ -11,4 +11,9 @@ class Orphan extends Model
     protected $guarded = [
         'id',
     ];
+
+    public function orphanage()
+    {
+        return $this->belongsTo(Orphanage::class);
+    }
 }

@@ -27,7 +27,7 @@ class OrphanageController extends Controller
         }
         // return orphanage by orphan id
         if ($request->orphan_id) {
-            return ['result' => OrphanageResource::collection(Orphan::find('id', $request->orphan_id)->orphanage->get())];
+            return ['result' => OrphanageResource::collection(Orphan::find($request->orphan_id)->orphanage->get())];
         }
         // return orphanage by id and user id
         if ($request->id && $request->user_id) {
