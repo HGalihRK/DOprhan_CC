@@ -16,6 +16,11 @@ html {
     text-rendering: optimizeLegibility;
 }
 
+summary {
+    cursor: pointer;
+    color: var(--blue-500);
+}
+
 /** Pseudo-classes */
 :root {
     --blue-500: #3B82F6;

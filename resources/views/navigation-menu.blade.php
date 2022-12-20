@@ -29,12 +29,12 @@
                             </button>
                         </div>
                         <!-- Dropdown menu, show/hide based on menu state.
-                                                                                                                                                            Entering: "transition ease-out duration-200"
-                                                                                                                                                            From: "transform opacity-0 scale-95"
-                                                                                                                                                            To: "transform opacity-100 scale-100"
-                                                                                                                                                            Leaving: "transition ease-in duration-75"
-                                                                                                                                                            From: "transform opacity-100 scale-100"
-                                                                                                                                                            To: "transform opacity-0 scale-95" -->
+                                                                                                                                                                Entering: "transition ease-out duration-200"
+                                                                                                                                                                From: "transform opacity-0 scale-95"
+                                                                                                                                                                To: "transform opacity-100 scale-100"
+                                                                                                                                                                Leaving: "transition ease-in duration-75"
+                                                                                                                                                                From: "transform opacity-100 scale-100"
+                                                                                                                                                                To: "transform opacity-0 scale-95" -->
                         <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-blue-500 ring-opacity-5 focus:outline-none"
                             role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1"
                             x-show="open">
@@ -99,7 +99,7 @@
             <!-- Current: "bg-blue-50 border-blue-500 text-blue-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
             <a href="{{ route('documentation') }}"
                 class="text-gray-500 border-transparent hover:text-blue-500 active:text-blue-500 inline-flex items-center px-1 pt-1 border-b-2 font-medium {{ request()->routeIs('documentation') ? 'text-blue-500 font-semibold' : '' }}">Dokumentasi</a>
-            <div>
+            <div class="grid gap-4">
                 <a href="{{ route('login') }}">
                     <x-secondary-button>
                         Masuk

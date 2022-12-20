@@ -6,7 +6,8 @@
             <p class="text-3xl font-extrabold text-gray-900">Pelajari cara mengakses Antarmuka Pemrograman Aplikasi
                 Publik D&#39;Orphan melalui dokumentasi berikut ini</p>
         </div>
-        <div class="bg-white rounded-2xl shadow p-8 space-y-8">
+        {{-- Competition --}}
+        <div class="bg-white rounded-2xl shadow px-8 pt-6 pb-8 space-y-8">
             <div>
                 <x-api-description>
                     <x-slot name="title">Competition</x-slot>
@@ -19,15 +20,16 @@
                         <x-api-description-item parameter=skill_id wajib=Ya tipe=Integer keterangan="ID Kategori" />
                     </x-slot>
                     <x-slot name="sukses">
-                        <pre id="sukses_competition" class="bg-black text-white rounded pl-5 py-2"></pre>
+                        <pre id="sukses_competition" class="bg-gray-900 text-white rounded pl-5 py-2"></pre>
                     </x-slot>
                     <x-slot name="gagal">
-                        <pre id="gagal_competition" class="bg-black text-white rounded pl-5 py-2"></pre>
+                        <pre id="gagal_competition" class="bg-gray-900 text-white rounded pl-5 py-2"></pre>
                     </x-slot>
                 </x-api-description>
-
             </div>
         </div>
+        {{--  --}}
+        
     </div>
 </x-guest-layout>
 
