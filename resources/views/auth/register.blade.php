@@ -37,26 +37,29 @@
                                     <div class="mt-4">
                                         <x-jet-label for="name" value="{{ __('Nama') }}" />
                                         <x-jet-input id="name" class="block mt-1 w-full" type="text"
-                                            name="name" :value="old('name')" required autofocus autocomplete="name" />
+                                            name="name" :value="old('name')" placeholder="John Doe" required autofocus
+                                            autocomplete="name" />
                                     </div>
 
                                     <div class="mt-4">
                                         <x-jet-label for="email" value="{{ __('Surel') }}" />
                                         <x-jet-input id="email" class="block mt-1 w-full" type="email"
-                                            name="email" :value="old('email')" required />
+                                            name="email" :value="old('email')" placeholder="johndoe@example.net"
+                                            required />
                                     </div>
 
                                     <div class="mt-4">
                                         <x-jet-label for="password" value="{{ __('Kata Sandi') }}" />
                                         <x-jet-input id="password" class="block mt-1 w-full" type="password"
-                                            name="password" required autocomplete="new-password" />
+                                            name="password" placeholder="********" required
+                                            autocomplete="new-password" />
                                     </div>
 
                                     <div class="mt-4">
                                         <x-jet-label for="password_confirmation"
                                             value="{{ __('Konfirmasi Kata Sandi') }}" />
                                         <x-jet-input id="password_confirmation" class="block mt-1 w-full"
-                                            type="password" name="password_confirmation" required
+                                            type="password" name="password_confirmation" placeholder="********" required
                                             autocomplete="new-password" />
                                     </div>
 
