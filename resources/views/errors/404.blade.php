@@ -1,3 +1,5 @@
+@section('title', '404 Not Found')
+
 <x-guest-layout>
     <!-- Page Container -->
     <div id="page-container" class="flex flex-col mx-auto w-full min-h-screen">
@@ -17,12 +19,12 @@
                         <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
                             Oops.. halaman tidak ditemukan
                         </h2>
-                        <h3 class="text-lg md:text-xl md:leading-relaxed font-medium text-gray-500 lg:w-2/3 mx-auto">
+                        <p class="text-lg md:text-xl md:leading-relaxed font-medium text-gray-500 lg:w-2/3 mx-auto">
                             Mohon periksa kembali tautan yang Anda masukkan
-                        </h3>
+                        </p>
                         <br>
                         <a href="{{ route('/') }}">
-                            <x-primary-button>Kembali ke beranda</x-primary-button>
+                            <x-primary-button class="w-fit">Kembali ke beranda</x-primary-button>
                         </a>
                     </div>
                 </div>

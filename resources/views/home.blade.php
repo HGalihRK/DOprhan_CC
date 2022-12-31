@@ -38,7 +38,7 @@
     {{-- Fitur --}}
     <div class="flex flex-col space-y-4" id="fitur">
         <div>
-            <h3 class="text-3xl leading-10 font-bold">Kenali D&#39;Orphan lebih lanjut</h3>
+            <p class="text-3xl leading-10 font-bold">Kenali D&#39;Orphan lebih lanjut</p>
             <div class="text-xl leading-8 text-gray-500">
                 <span class="font-bold">D'Orphan</span>&nbsp;<span>menghadirkan dokumentasi berbasis Aplikasi Web untuk
                     mendukung perkembangan Bakat dan Minat Anak Panti Asuhan</span>
@@ -97,7 +97,7 @@
     {{-- Kategori --}}
     <div class="flex flex-col space-y-4">
         <div>
-            <h3 class="text-3xl leading-10 font-bold">Beragam kategori kursus tersedia</h3>
+            <p class="text-3xl leading-10 font-bold">Beragam kategori kursus tersedia</p>
         </div>
         <div>
             <img src="{{ url('img/home-kategori.jpg') }}" alt="Kategori" />
@@ -124,7 +124,7 @@
 
     {{-- Statistik --}}
     <div class="flex flex-col space-y-4">
-        <h3 class="text-3xl leading-10 font-bold">D&#39;Orphan dalam angka</h3>
+        <p class="text-3xl leading-10 font-bold">Statistik data D&#39;Orphan</p>
         <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             <x-home-statistik-card>
                 <x-slot:title>Panti Asuhan di Surabaya</x-slot:title>

@@ -1,3 +1,28 @@
+# D'Orphan - API
+> IMT01306609-A Cloud Computing
+
+## :man_technologist::woman_technologist: Tentang Pengembang
+**Tim Archotech:**
+- 0706012010013 - Nur Azizah
+- 0706012010029 - Nathanael Abel Arianto
+- 0706012010039 - Probo Krishnacahya
+- 0706012010055 - Haning Galih Rani Kumbara
+
+## :globe_with_meridians: Tentang Aplikasi
+**D'Orphan - API** adalah sistem Platform as a Service berupa layanan Antarmuka Pemrograman Aplikasi Publik untuk semua Pengembang dengan dokumentasi berbasis Aplikasi Web untuk mendukung perkembangan Bakat dan Minat Anak Panti Asuhan.
+
+*) Informasi lebih lanjut telah tercantum di [Notion](https://archotech.notion.site/Overview-1af40ad30c4047e3b91e08b7101ce4f2).
+
+| Keterangan | Detail |
+|---------- | ------------- |
+| Program Studi | Informatika |
+| Fakultas | Teknologi Informasi |
+| Perguruan Tinggi | Universitas Ciputra Surabaya |
+| Semester | 5 |
+| Waktu Pembuatan | November 2022 - Januari 2023 |
+
+---
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
