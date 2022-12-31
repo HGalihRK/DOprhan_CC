@@ -19,14 +19,15 @@
     {{-- Favicon --}}
     <link rel="icon" href="{{ url('img/logo.svg?v=2') }}" type="image/svg" />
 
-    {{-- Laravel Framework CSRF Token --}}
+    {{-- Laravel CSRF Token --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     {{-- Google Fonts CDN --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     {{-- Alpine.js CDN --}}
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
@@ -34,7 +35,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="flex flex-col h-screen bg-gray-50 bg-body bg-repeat bg-local bg-blend-multiply">
+<body class="flex flex-col h-screen bg-gray-50 bg-body bg-blend-multiply">
     {{-- Header --}}
     @livewire('navigation-menu')
 

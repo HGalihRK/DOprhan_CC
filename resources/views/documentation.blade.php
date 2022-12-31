@@ -3,8 +3,8 @@
 <x-guest-layout>
     <div class="flex flex-col space-y-8">
         <div class="space-y-2">
-            <p class="text-3xl font-extrabold text-gray-900">Pelajari cara mengakses Antarmuka Pemrograman Aplikasi
-                Publik D&#39;Orphan melalui dokumentasi berikut ini</p>
+            <p class="text-3xl font-extrabold text-gray-900">Dokumentasi Antarmuka Pemrograman Aplikasi
+                Publik D&#39;Orphan</p>
         </div>
         {{-- Competition --}}
         <div class="bg-white rounded-2xl shadow px-8 pt-6 pb-8 space-y-8">
@@ -20,7 +20,7 @@
                         <x-api-description-item parameter=skill_id wajib=Ya tipe=Integer keterangan="ID Kategori" />
                     </x-slot>
                     <x-slot name="sukses">
-                        <pre id="sukses_competition" class="bg-gray-900 text-white rounded pl-5 py-2"></pre>
+                        <pre id="sukses_competition" class="bg-gray-900 text-white rounded pl-5 py-2 whitespace-pre-wrap"></pre>
                     </x-slot>
                     <x-slot name="gagal">
                         <pre id="gagal_competition" class="bg-gray-900 text-white rounded pl-5 py-2"></pre>
@@ -29,7 +29,7 @@
             </div>
         </div>
         {{--  --}}
-        
+
     </div>
 </x-guest-layout>
 
