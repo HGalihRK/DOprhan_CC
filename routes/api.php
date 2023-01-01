@@ -29,11 +29,11 @@ Route::post('/login', [LoginController::class, 'login']);
 
 Route::middleware(VerifyAPIKey::class)->group(function () {
     Route::get('competition', [CompetitionController::class, 'index'])->name('api-competition');
-    Route::get('course-booking', [CourseBookingController::class, 'getCourseBooking']);
-    Route::get('day', [DayController::class, 'getDay']);
-    Route::get('course', [CourseController::class, 'index']);
-    Route::get('orphanage', [OrphanageController::class, 'index']);
-    Route::get('tutor', [TutorController::class, 'index']);
-    Route::get('competition-recommendation', [CompetitionRecommendationController::class, 'index']);
+    Route::get('course-booking', [CourseBookingController::class, 'getCourseBooking'])->name('api-course-booking');
+    Route::get('day', [DayController::class, 'getDay'])->name('api-day');
+    Route::get('course', [CourseController::class, 'index'])->name('api-course');
+    Route::get('orphanage', [OrphanageController::class, 'index'])->name('api-orphanage');
+    Route::get('tutor', [TutorController::class, 'index'])->name('api-tutor');
+    Route::get('competition-recommendation', [CompetitionRecommendationController::class, 'index'])->name('api-competition-recommendation');
     Route::get('orphan-cr', [OrphanCrController::class, 'index']);
 });
