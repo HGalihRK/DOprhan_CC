@@ -6,6 +6,7 @@
             <p class="text-3xl font-extrabold text-gray-900">Dokumentasi Antarmuka Pemrograman Aplikasi
                 Publik D&#39;Orphan</p>
         </div>
+
         {{-- Competition --}}
         <div class="bg-white rounded-2xl shadow px-8 pt-6 pb-8 space-y-8">
             <div>
@@ -151,6 +152,28 @@
             </div>
         </div>
 
+        {{-- Tutor --}}
+        <div class="bg-white rounded-2xl shadow px-8 pt-6 pb-8 space-y-8">
+            <div>
+                <x-api-description>
+                    <x-slot name="title">Tutor</x-slot>
+                    <x-slot name="description">Method Tutor digunakan untuk mendapatkan data tutor
+                        yang terdaftar pada sistem</x-slot>
+                    <x-slot name="url">{{ route('api-tutor') }}</x-slot>
+                    <x-slot name="parameter">
+                        <x-api-description-item parameter=id wajib=Tidak tipe=Integer keterangan="ID Tutor" />
+                        <x-api-description-item parameter=user_id wajib=Tidak tipe=Integer keterangan="ID Pengguna" />
+                        <x-api-description-item parameter=skill_id wajib=Tidak tipe=Integer keterangan="ID Kategori" />
+                    </x-slot>
+                    <x-slot name="sukses">
+                        <pre id="sukses_tutor" class="bg-gray-900 text-white rounded pl-5 py-2 whitespace-pre-wrap"></pre>
+                    </x-slot>
+                    <x-slot name="gagal">
+                        <pre id="gagal_tutor" class="bg-gray-900 text-white rounded pl-5 py-2"></pre>
+                    </x-slot>
+                </x-api-description>
+            </div>
+        </div>
     </div>
 </x-guest-layout>
 
@@ -1018,4 +1041,49 @@
     };
 
     document.getElementById("gagal_orphanage").innerHTML = JSON.stringify(response, null, 4);
+
+    // Sukses - Tutor
+    var response = {
+        "result": [{
+            "id": 1,
+            "user_id": {
+                "id": 1,
+                "name": "Ruth Vania",
+                "gender": "Female",
+                "user_type": "Tutor",
+                "profile_photo_path": null,
+                "address": "Ds. Jagakarsa No. 188, Lhokseumawe 28769, Kepri",
+                "created_at": "2022-12-31T16:19:36.000000Z",
+                "updated_at": "2022-12-31T16:19:36.000000Z",
+                "profile_photo_url": "https://ui-avatars.com/api/?name=R+V&color=7F9CF5&background=EBF4FF"
+            },
+            "description": "Consectetur aliquid omnis eos dolor quo quod facilis. Sapiente nostrum voluptatem voluptate quia natus hic. Facilis alias sed ducimus ea sit voluptatem.",
+            "skills": [{
+                    "id": 58,
+                    "name": "Aquathlon",
+                    "photo_path": null,
+                    "created_at": "2022-12-31T16:19:54.000000Z",
+                    "updated_at": "2022-12-31T16:19:54.000000Z"
+                },
+                {
+                    "id": 73,
+                    "name": "Dansa Vallroom Latin",
+                    "photo_path": null,
+                    "created_at": "2022-12-31T16:19:54.000000Z",
+                    "updated_at": "2022-12-31T16:19:54.000000Z"
+                }
+            ],
+            "created_at": "2022-12-31T16:19:36.000000Z",
+            "updated_at": "2022-12-31T16:19:36.000000Z"
+        }]
+    }
+
+    document.getElementById("sukses_tutor").innerHTML = JSON.stringify(response, null, 4);
+
+    // Gagal - Tutor
+    var response = {
+        "result": "Invalid API Key"
+    };
+
+    document.getElementById("gagal_tutor").innerHTML = JSON.stringify(response, null, 4);
 </script>
