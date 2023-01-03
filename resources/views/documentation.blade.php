@@ -17,8 +17,6 @@
                     <x-slot name="url">{{ route('api-competition') }}</x-slot>
                     <x-slot name="parameter">
                         <x-api-description-item parameter=id wajib=Tidak tipe=Integer keterangan="ID Lomba" />
-                        <x-api-description-item parameter=tutor_id wajib=Tidak tipe=Integer keterangan="ID Tutor" />
-                        <x-api-description-item parameter=skill_id wajib=Tidak tipe=Integer keterangan="ID Kategori" />
                     </x-slot>
                     <x-slot name="sukses">
                         <pre id="sukses_competition" class="bg-gray-900 text-white rounded pl-5 py-2 whitespace-pre-wrap"></pre>
