@@ -53,9 +53,7 @@
         <div class="col-span-6 sm:col-span-4">
             <x-jet-label for="name" value="{{ __('API Key') }}" />
             <div class="flex space-x-2" id="api_key" onclick="copyToClipboard()">
-                <div>
-                    {{ Auth::user()->api_key }}
-                </div>
+                <strong>{{ Auth::user()->api_key }}</strong>
                 <div title="Salin">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6 text-blue-500 cursor-pointer">
