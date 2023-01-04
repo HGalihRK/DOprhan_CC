@@ -16,7 +16,7 @@
                         yang terdaftar pada sistem</x-slot>
                     <x-slot name="url">{{ route('api-competition') }}</x-slot>
                     <x-slot name="parameter">
-                        <x-api-description-item parameter=id wajib=Tidak tipe=Integer keterangan="ID Lomba" />
+                        <x-api-description-item parameter=id wajib=Tidak tipe=integer keterangan="ID Lomba" />
                     </x-slot>
                     <x-slot name="sukses">
                         <pre id="sukses_competition" class="bg-gray-900 text-white rounded pl-5 py-2 whitespace-pre-wrap"></pre>
@@ -38,12 +38,12 @@
                         yang terdaftar pada sistem</x-slot>
                     <x-slot name="url">{{ route('api-competition-recommendation') }}</x-slot>
                     <x-slot name="parameter">
-                        <x-api-description-item parameter=id wajib=Tidak tipe=Integer
+                        <x-api-description-item parameter=id wajib=Tidak tipe=integer
                             keterangan="ID Rekomendasi Lomba" />
-                        <x-api-description-item parameter=tutor_id wajib=Tidak tipe=Integer keterangan="ID Tutor" />
-                        <x-api-description-item parameter=orphanage_id wajib=Tidak tipe=Integer
+                        <x-api-description-item parameter=tutor_id wajib=Tidak tipe=integer keterangan="ID Tutor" />
+                        <x-api-description-item parameter=orphanage_id wajib=Tidak tipe=integer
                             keterangan="ID Panti Asuhan" />
-                        <x-api-description-item parameter=competition_id wajib=Tidak tipe=Integer
+                        <x-api-description-item parameter=competition_id wajib=Tidak tipe=integer
                             keterangan="ID Lomba" />
                     </x-slot>
                     <x-slot name="sukses">
@@ -65,9 +65,9 @@
                         yang terdaftar pada sistem</x-slot>
                     <x-slot name="url">{{ route('api-course') }}</x-slot>
                     <x-slot name="parameter">
-                        <x-api-description-item parameter=id wajib=Tidak tipe=Integer keterangan="ID Kursus" />
-                        <x-api-description-item parameter=tutor_id wajib=Tidak tipe=Integer keterangan="ID Tutor" />
-                        <x-api-description-item parameter=skill_id wajib=Tidak tipe=Integer keterangan="ID Kategori" />
+                        <x-api-description-item parameter=id wajib=Tidak tipe=integer keterangan="ID Kursus" />
+                        <x-api-description-item parameter=tutor_id wajib=Tidak tipe=integer keterangan="ID Tutor" />
+                        <x-api-description-item parameter=skill_id wajib=Tidak tipe=integer keterangan="ID Kategori" />
                     </x-slot>
                     <x-slot name="sukses">
                         <pre id="sukses_course" class="bg-gray-900 text-white rounded pl-5 py-2 whitespace-pre-wrap"></pre>
@@ -88,11 +88,11 @@
                         yang terdaftar pada sistem</x-slot>
                     <x-slot name="url">{{ route('api-course-booking') }}</x-slot>
                     <x-slot name="parameter">
-                        <x-api-description-item parameter=id wajib=Tidak tipe=Integer keterangan="ID Pesanan Kursus" />
-                        <x-api-description-item parameter=course_id wajib=Tidak tipe=Integer keterangan="ID Kursus" />
-                        <x-api-description-item parameter=transaction_id wajib=Tidak tipe=Integer
+                        <x-api-description-item parameter=id wajib=Tidak tipe=integer keterangan="ID Pesanan Kursus" />
+                        <x-api-description-item parameter=course_id wajib=Tidak tipe=integer keterangan="ID Kursus" />
+                        <x-api-description-item parameter=transaction_id wajib=Tidak tipe=integer
                             keterangan="ID Transaksi" />
-                        <x-api-description-item parameter=orphanage_id wajib=Tidak tipe=Integer
+                        <x-api-description-item parameter=orphanage_id wajib=Tidak tipe=integer
                             keterangan="ID Panti Asuhan" />
                     </x-slot>
                     <x-slot name="sukses">
@@ -114,7 +114,7 @@
                         yang terdaftar pada sistem</x-slot>
                     <x-slot name="url">{{ route('api-day') }}</x-slot>
                     <x-slot name="parameter">
-                        <x-api-description-item parameter=id wajib=Tidak tipe=Integer keterangan="ID Hari" />
+                        <x-api-description-item parameter=id wajib=Tidak tipe=integer keterangan="ID Hari" />
                     </x-slot>
                     <x-slot name="sukses">
                         <pre id="sukses_day" class="bg-gray-900 text-white rounded pl-5 py-2 whitespace-pre-wrap"></pre>
@@ -135,9 +135,9 @@
                         yang terdaftar pada sistem</x-slot>
                     <x-slot name="url">{{ route('api-orphanage') }}</x-slot>
                     <x-slot name="parameter">
-                        <x-api-description-item parameter=id wajib=Tidak tipe=Integer keterangan="ID Panti Asuhan" />
-                        <x-api-description-item parameter=user_id wajib=Tidak tipe=Integer keterangan="ID Pengguna" />
-                        <x-api-description-item parameter=orphan_id wajib=Tidak tipe=Integer
+                        <x-api-description-item parameter=id wajib=Tidak tipe=integer keterangan="ID Panti Asuhan" />
+                        <x-api-description-item parameter=user_id wajib=Tidak tipe=integer keterangan="ID Pengguna" />
+                        <x-api-description-item parameter=orphan_id wajib=Tidak tipe=integer
                             keterangan="ID Anak Panti Asuhan" />
                     </x-slot>
                     <x-slot name="sukses">
@@ -159,9 +159,9 @@
                         yang terdaftar pada sistem</x-slot>
                     <x-slot name="url">{{ route('api-tutor') }}</x-slot>
                     <x-slot name="parameter">
-                        <x-api-description-item parameter=id wajib=Tidak tipe=Integer keterangan="ID Tutor" />
-                        <x-api-description-item parameter=user_id wajib=Tidak tipe=Integer keterangan="ID Pengguna" />
-                        <x-api-description-item parameter=skill_id wajib=Tidak tipe=Integer keterangan="ID Kategori" />
+                        <x-api-description-item parameter=id wajib=Tidak tipe=integer keterangan="ID Tutor" />
+                        <x-api-description-item parameter=user_id wajib=Tidak tipe=integer keterangan="ID Pengguna" />
+                        <x-api-description-item parameter=skill_id wajib=Tidak tipe=integer keterangan="ID Kategori" />
                     </x-slot>
                     <x-slot name="sukses">
                         <pre id="sukses_tutor" class="bg-gray-900 text-white rounded pl-5 py-2 whitespace-pre-wrap"></pre>
