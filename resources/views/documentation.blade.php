@@ -90,8 +90,8 @@
                     <x-slot name="parameter">
                         <x-api-description-item parameter=id wajib=Tidak tipe=integer keterangan="ID Pesanan Kursus" />
                         <x-api-description-item parameter=course_id wajib=Tidak tipe=integer keterangan="ID Kursus" />
-                        <x-api-description-item parameter=transaction_id wajib=Tidak tipe=integer
-                            keterangan="ID Transaksi" />
+                        <x-api-description-item parameter=tutor_id wajib=Tidak tipe=integer
+                            keterangan="ID Tutor" />
                         <x-api-description-item parameter=orphanage_id wajib=Tidak tipe=integer
                             keterangan="ID Panti Asuhan" />
                     </x-slot>
